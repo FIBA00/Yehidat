@@ -20,14 +20,12 @@ export const SOCIAL = {
   TELEGRAM: "#",
 };
 
-// id maps to packages.<id> in the translation files
 export const PACKAGES = [
   { id: "basic", price: 4000, deposit: 1000, featured: false },
   { id: "standard", price: 6000, deposit: 1500, featured: true },
   { id: "premium", price: 10000, deposit: 2500, featured: false },
 ];
 
-// id maps to occasions.<id> in the translation files
 export const OCCASIONS = [
   { id: "birthday", emoji: "🎂" },
   { id: "anniversary", emoji: "💍" },
@@ -39,11 +37,6 @@ export const OCCASIONS = [
   { id: "justBecause", emoji: "✨" },
 ];
 
-// ── GALLERY ──────────────────────────────────────────────────
-// Replace src with real image/video paths.
-// e.g. import g1 from '../assets/images/gallery-1.jpg' then src: g1
-
-// ---ICONS---
 export const yehidatIcon = "/icons/icon_navbar1.png";
 
 export const GALLERY_ITEMS = [
@@ -67,7 +60,7 @@ export const GALLERY_ITEMS = [
       webp: "/images/webp/assets_suprise_2.webp",
     },
     alt: "Flower arrangement",
-    large: false,
+    large: true,
   },
   {
     id: 3,
@@ -78,7 +71,7 @@ export const GALLERY_ITEMS = [
       webp: "/images/webp/assets_hero_cake.webp",
     },
     alt: "Cake decoration",
-    large: false,
+    large: true,
   },
   {
     id: 4,
@@ -89,20 +82,20 @@ export const GALLERY_ITEMS = [
       webp: "/images/webp/assets_banner_with_candles.webp",
     },
     alt: "Anniversary decoration",
-    large: false,
+    large: true,
   },
   {
     id: 5,
-    name: "",
+    name: "balloons",
     type: "image",
     src: {
-      avif: "",
-      webp: "",
+      avif: "/images/avif/assets_hero_cake.avif",
+      webp: "/images/webp/assets_hero_cake.webp",
     },
     alt: "Balloon setup",
-    large: false,
+    large: true,
   },
 ];
 
-// Replace with real face image paths (64×64px circular portraits)
+// TODO: add images of the owners here
 export const TRUST_FACES = [null, null, null];
