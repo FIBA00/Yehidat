@@ -5,4 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/Yehidat/",
   plugins: [react(), tailwindcss()],
+  base: "/Yehidat/",
 });

@@ -37,6 +37,7 @@ function LanguageSwitcher() {
 
 export default function Navbar() {
   const { t } = useTranslation();
+  const baseUrl = import.meta.env.BASE_URL;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
@@ -86,7 +87,7 @@ export default function Navbar() {
             {NAV_KEYS.map(({ key, href }) => (
               <a
                 key={key}
-                href={isHome ? href : `${basePath}${href}`}
+                href={isHome ? href : `${baseUrl}${href}`}
                 onClick={handleAnchor(href)}
                 className="text-sm font-medium text-ink-soft hover:text-ink transition-colors duration-150"
               >
@@ -98,7 +99,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
             <a
-              href={isHome ? "#contact" : `${basePath}#contact`}
+              href={isHome ? "#contact" : `${baseUrl}#contact`}
               onClick={handleAnchor("#contact")}
               className="btn-gold text-sm"
             >
@@ -142,7 +143,7 @@ export default function Navbar() {
               {NAV_KEYS.map(({ key, href }) => (
                 <a
                   key={key}
-                  href={isHome ? href : `${basePath}${href}`}
+                  href={isHome ? href : `${baseUrl}${href}`}
                   onClick={handleAnchor(href)}
                   className="text-base font-medium text-ink-soft py-1"
                 >
@@ -150,7 +151,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href={isHome ? "#contact" : `${basePath}#contact`}
+                href={isHome ? "#contact" : `${baseUrl}#contact`}
                 onClick={handleAnchor("#contact")}
                 className="btn-gold text-center text-sm mt-1"
               >
