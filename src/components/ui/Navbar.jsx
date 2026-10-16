@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
 import { yehidatIcon } from "../../data/constants";
+
 
 const NAV_KEYS = [
   { key: "occasions", href: "#occasions" },
@@ -13,17 +14,24 @@ const NAV_KEYS = [
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
-  const toggle = () =>
-    i18n.changeLanguage(i18n.language === "am" ? "en" : "am");
+  const currentLanguage = i18n.language?.startsWith("am")
+    ? "am"
+    : i18n.language?.startsWith("oro")
+      ? "oro"
+      : "en";
+  const changeLanguage = (e) => i18n.changeLanguage(e.target.value);
 
   return (
-    <button
-      onClick={toggle}
-      className="text-xs font-semibold text-ink-soft border border-gold rounded-full px-3 py-1.5 hover:bg-gold-pale transition-colors"
-      aria-label="Switch language"
+    <select
+      value={currentLanguage}
+      onChange={changeLanguage}
+      className="text-xs font-semibold text-ink-soft border border-gold rounded-full px-3 py-1.5 bg-parchment hover:bg-gold-pale transition-colors"
+      aria-label="Change language"
     >
-      {i18n.language === "am" ? "EN" : "አማ"}
-    </button>
+      <option value="en">EN</option>
+      <option value="am">አማ</option>
+      <option value="oro">OR</option>
+    </select>
   );
 }
 
@@ -60,7 +68,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo — replace the placeholder div with a real <img> when logo is ready */}
 
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-4 px-2">
             <div className="w-10 h-10 rounded-xl bg-gold flex items-center justify-center font-display font-bold text-lg text-ink select-none">
               <img
                 src={yehidatIcon}
@@ -83,7 +91,7 @@ export default function Navbar() {
               >
                 {t(`nav.${key}`)}
               </a>
-            ))}
+            ))} 
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
@@ -99,9 +107,10 @@ export default function Navbar() {
 
           <div className="md:hidden flex items-center gap-3">
             <LanguageSwitcher />
+           
             <button
               onClick={() => setMenuOpen((o) => !o)}
-              className="flex flex-col gap-1.5 p-1"
+              className="flex flex-col gap-2 p-1"
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
             >

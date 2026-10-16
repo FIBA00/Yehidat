@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 export default function ResponsiveImage({
@@ -8,9 +9,22 @@ export default function ResponsiveImage({
 }) {
   const [useFallback, setUseFallback] = useState(false);
 
-  if (!path || (!path.avif && !path.webp)) return null;
+  if (!path) return null;
 
-  const fallbackSrc = path.avif && path.webp ? path.webp : undefined;
+  if (typeof path === "string") {
+    return (
+      <img
+        src={path}
+        alt={alt}
+        loading={loading}
+        className={`${className} object-cover`}
+      />
+    );
+  }
+
+  const imagePath = path || {};
+  if (!imagePath.avif && !imagePath.webp && !imagePath.png) return null;
+  const fallbackSrc = imagePath.webp || imagePath.avif || imagePath.png;
 
   if (useFallback && fallbackSrc) {
     return (
@@ -18,17 +32,18 @@ export default function ResponsiveImage({
         src={fallbackSrc}
         alt={alt}
         loading={loading}
-        className={`${className} w-full h-full object-cover`}
+        className={`${className} object-cover`}
       />
     );
   }
 
   return (
     <picture className={className}>
-      {path.avif && <source srcSet={path.avif} type="image/avif" />}
-      {path.webp && <source srcSet={path.webp} type="image/webp" />}
+      {imagePath.avif && <source srcSet={imagePath.avif} type="image/avif" />}
+      {imagePath.webp && <source srcSet={imagePath.webp} type="image/webp" />}
+      {imagePath.png && <source srcSet={imagePath.png} type="image/png" />}
       <img
-        src={path.webp || path.avif}
+        src={fallbackSrc}
         alt={alt}
         loading={loading}
         onError={() => {
