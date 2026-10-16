@@ -15,59 +15,72 @@ export const CONTACT = {
 };
 
 export const SOCIAL = {
-  INSTAGRAM: '#',
-  TIKTOK: '#',
-  TELEGRAM: '#',
-}
+  INSTAGRAM: "#",
+  TIKTOK: "#",
+  TELEGRAM: "#",
+};
 
 // id maps to packages.<id> in the translation files
 export const PACKAGES = [
-  { id: 'basic',    price: 4000,  deposit: 1000, featured: false },
-  { id: 'standard', price: 6000,  deposit: 1500, featured: true },
-  { id: 'premium',  price: 10000, deposit: 2500, featured: false },
-]
+  { id: "basic", price: 4000, deposit: 1000, featured: false },
+  { id: "standard", price: 6000, deposit: 1500, featured: true },
+  { id: "premium", price: 10000, deposit: 2500, featured: false },
+];
 
 // id maps to occasions.<id> in the translation files
 export const OCCASIONS = [
-  { id: 'birthday',     emoji: '🎂' },
-  { id: 'anniversary',  emoji: '💍' },
-  { id: 'graduation',   emoji: '🎓' },
-  { id: 'valentines',   emoji: '💝' },
-  { id: 'fathersDay',   emoji: '👨‍👩‍👧' },
-  { id: 'mothersDay',   emoji: '💐' },
-  { id: 'promotion',    emoji: '🎉' },
-  { id: 'justBecause',  emoji: '✨' },
-]
+  { id: "birthday", emoji: "🎂" },
+  { id: "anniversary", emoji: "💍" },
+  { id: "graduation", emoji: "🎓" },
+  { id: "valentines", emoji: "💝" },
+  { id: "fathersDay", emoji: "👨‍👩‍👧" },
+  { id: "mothersDay", emoji: "💐" },
+  { id: "promotion", emoji: "🎉" },
+  { id: "justBecause", emoji: "✨" },
+];
 
 // ── GALLERY ──────────────────────────────────────────────────
 // Replace src with real image/video paths.
 // e.g. import g1 from '../assets/images/gallery-1.jpg' then src: g1
 
-import cake from "../assets/images/hero_cake.JPG";
-import hbd from "../assets/images/hero_banner.JPG";
-import suprise_2 from "../assets/images/suprise_2.JPG";
+import cake_avif from "../../public/images/avif/assets_hero_cake.avif";
+import cake_webp from "../../public/images/avif/assets_hero_cake.webp";
 
+import hbd_avif from "../../public/images/avif/assets_hero_banner.avif";
+import hbd_webp from "../../public/images/avif/assets_hero_banner.webp";
+
+import suprise_2_avif from "../../public/images/avif/assets_suprise_2.avif";
+import suprise_2_webp from "../../public/images/avif/assets_suprise_2.webp";
+
+import yehidatBanner_webp from "../../public/images/webp/assets_suprise_2.webp";
+import yehidatBanner_avif from "../../public/images/avif/assets_suprise_2.avif";
 
 export const GALLERY_ITEMS = [
   {
     id: 1,
     type: "image",
-    src: hbd,
+    src: hbd_avif || hbd_webp,
     alt: "Birthday surprise setup",
     large: true,
   },
   {
     id: 2,
     type: "image",
-    src: suprise_2,
+    src: suprise_2_avif || suprise_2_webp,
     alt: "Flower arrangement",
     large: false,
   },
-  { id: 3, type: "image", src: cake, alt: "Cake decoration", large: false },
+  {
+    id: 3,
+    type: "image",
+    src: cake_avif || cake_webp,
+    alt: "Cake decoration",
+    large: false,
+  },
   {
     id: 4,
     type: "image",
-    src: null,
+    src: yehidatBanner_avif || yehidatBanner_webp,
     alt: "Anniversary decoration",
     large: false,
   },
@@ -75,4 +88,4 @@ export const GALLERY_ITEMS = [
 ];
 
 // Replace with real face image paths (64×64px circular portraits)
-export const TRUST_FACES = [null, null, null]
+export const TRUST_FACES = [null, null, null];

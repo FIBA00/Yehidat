@@ -1,21 +1,24 @@
-import { useTranslation } from 'react-i18next'
-import { motion } from 'motion/react'
-import { TRUST_FACES } from '../../data/constants'
-import ImagePlaceholder from '../ui/ImagePlaceholder'
-import { useAppStore } from '../../store/useAppStore'
+import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
-import yehidatBanner from "../../assets/images/suprise_2.JPG";
+// ! internal imports
+import ImagePlaceholder from "../ui/ImagePlaceholder";
+import { TRUST_FACES, GALLERY_ITEMS } from "../../data/constants";
+import { useAppStore } from "../../store/useAppStore";
+import ResponsiveImage from "../ui/Image.jsx";
 
 // ── HERO IMAGE ────────────────────────────────────────────────
 // import heroSrc from '../../assets/images/hero.jpg'
 // Recommended: 900×1080px portrait of a surprise moment
-const heroSrc = yehidatBanner;
+
+const heroSrc = GALLERY_ITEMS[3].src;
 
 export default function Hero() {
-  const { t } = useTranslation()
-  const clearSelection = useAppStore((s) => s.clearSelection)
+  const { t } = useTranslation();
+  const clearSelection = useAppStore((s) => s.clearSelection);
 
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  const scrollTo = (id) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <section className="pt-32 pb-20 overflow-hidden">
@@ -96,12 +99,17 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="relative order-first lg:order-last"
           >
-            <ImagePlaceholder
+            <ResponsiveImage
+              path={heroSrc}
+              alt="A beautifully decorated surprise setup"
+              className="w-full aspect-3/2 ribbon-border"
+            />
+            {/* <ImagePlaceholder
               src={heroSrc}
               alt="A beautifully decorated surprise setup"
               hint={t("hero.imageHint")}
               className="w-full aspect-3/2 ribbon-border"
-            />
+            /> */}
 
             <div className="absolute -bottom-4 -left-4 sm:-left-5 bg-parchment border border-gold-edge/55 rounded-xl px-4 py-3 shadow-card flex items-center gap-3">
               <div className="w-10 h-10 bg-gold-pale rounded-lg flex items-center justify-center text-xl">

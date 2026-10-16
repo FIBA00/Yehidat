@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/ui/Navbar'
-import Footer from './components/ui/Footer'
-import Home   from './pages/Home'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/ui/Navbar";
+import Footer from "./components/ui/Footer";
+import Home from "./pages/Home";
 
 // Future routes slot in here:
 //   import Admin  from './pages/Admin'
@@ -20,5 +20,5 @@ export default function App() {
       </main>
       <Footer />
     </BrowserRouter>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create } from "zustand";
 
 /**
  * App-wide client state.
@@ -21,5 +21,6 @@ export const useAppStore = create((set) => ({
   selectedPackageId: null,
   setSelectedPackageId: (id) => set({ selectedPackageId: id }),
 
-  clearSelection: () => set({ selectedOccasion: null, selectedPackageId: null }),
-}))
+  clearSelection: () =>
+    set({ selectedOccasion: null, selectedPackageId: null }),
+}));
