@@ -42,6 +42,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
   const isHome = pathname === "/";
+  const basePath = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

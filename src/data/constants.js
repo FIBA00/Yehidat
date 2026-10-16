@@ -20,6 +20,8 @@ export const SOCIAL = {
   TELEGRAM: "#",
 };
 
+const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 export const PACKAGES = [
   { id: "basic", price: 3999, deposit: 2000, featured: false },
   { id: "standard", price: 5999, deposit: 2500, featured: true },
@@ -31,58 +33,58 @@ export const OCCASIONS = [
   {
     id: "birthday",
     emoji: "🎂",
-    src: "/occasions/birthday.png",
+    src: withBase("occasions/birthday.png"),
     alt: "Birthday Occasion",
   },
   {
     id: "anniversary",
     emoji: "💍",
-    src: "/occasions/anniversary.png",
+    src: withBase("occasions/anniversary.png"),
     alt: "Anniversary Occasion",
   },
   {
     id: "graduation",
     emoji: "🎓",
-    src: "/occasions/graduation.png",
+    src: withBase("occasions/graduation.png"),
     alt: "Graduation",
   },
   {
     id: "fathersDay",
     emoji: "👨‍👩‍👧",
-    src: "/occasions/fathersDay.png",
+    src: withBase("occasions/fathersDay.png"),
     alt: "Fathers Day",
   },
 
   {
     id: "mothersDay",
     emoji: "💐",
-    src: "/occasions/mothersDay.png",
+    src: withBase("occasions/mothersDay.png"),
     alt: "Mothers day",
   },
 
   {
     id: "promotion",
     emoji: "🎉",
-    src: "/occasions/promotion.png",
+    src: withBase("occasions/promotion.png"),
     alt: "Promotion",
   },
   {
     id: "justBecause",
     emoji: "✨",
-    src: "/occasions/justBecause.png",
+    src: withBase("occasions/justBecause.png"),
     alt: "Be happy just because",
   },
 ];
 
-export const yehidatIcon = "/icons/assets_icon_navbar1.png";
+export const yehidatIcon = withBase("icons/assets_icon_navbar1.png");
 
 export const GALLERY_ITEMS = [
   {
     id: 1,
     type: "image",
     src: {
-      avif: "/images/avif/image_1.avif",
-      webp: "/images/webp/image_1.webp",
+      avif: withBase("images/avif/image_1.avif"),
+      webp: withBase("images/webp/image_1.webp"),
     },
     alt: "Previous Suprise 1",
     large: true,
@@ -92,8 +94,8 @@ export const GALLERY_ITEMS = [
 
     type: "image",
     src: {
-      avif: "/images/avif/image_2.avif",
-      webp: "/images/webp/image_2.webp",
+      avif: withBase("images/avif/image_2.avif"),
+      webp: withBase("images/webp/image_2.webp"),
     },
     alt: "Previous Suprise 2",
     large: true,
@@ -103,8 +105,8 @@ export const GALLERY_ITEMS = [
 
     type: "image",
     src: {
-      avif: "/images/avif/image_3.avif",
-      webp: "/images/webp/image_3.webp",
+      avif: withBase("images/avif/image_3.avif"),
+      webp: withBase("images/webp/image_3.webp"),
     },
     alt: "Previous Suprise 3",
     large: true,
@@ -114,8 +116,8 @@ export const GALLERY_ITEMS = [
 
     type: "image",
     src: {
-      avif: "/images/avif/image_4.avif",
-      webp: "/images/webp/image_4.webp",
+      avif: withBase("images/avif/image_4.avif"),
+      webp: withBase("images/webp/image_4.webp"),
     },
     alt: "Previous Suprise 4",
     large: true,
@@ -124,8 +126,8 @@ export const GALLERY_ITEMS = [
     id: 5,
     type: "image",
     src: {
-      avif: "/images/avif/image_5.avif",
-      webp: "/images/webp/image_5.webp",
+      avif: withBase("images/avif/image_5.avif"),
+      webp: withBase("images/webp/image_5.webp"),
     },
     alt: "Previous Suprise 5",
     large: true,
