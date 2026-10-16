@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { GALLERY_ITEMS } from "../../data/constants";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
 import Reveal from "../ui/Reveal";
+import ResponsiveImage from "../ui/Image";
 
 // ── GALLERY IMAGE INSERTION ───────────────────────────────────
 // In data/constants.js, update GALLERY_ITEMS[n].src with imported paths:
@@ -44,13 +45,21 @@ export default function Gallery() {
                 key={item.id}
                 className={`rounded-2xl overflow-hidden ${colSpan}`}
               >
-                <ImagePlaceholder
-                  src={item.src}
-                  alt={item.alt}
-                  type={item.type}
-                  hint={HINTS[i]}
-                  className="w-full h-full min-h-40"
-                />
+                {item.src ? (
+                  <ResponsiveImage
+                    path={item.src}
+                    alt={item.alt}
+                    className="w-full h-full min-h-40"
+                  />
+                ) : (
+                  <ImagePlaceholder
+                    src={null}
+                    alt={item.alt}
+                    type={item.type}
+                    hint={HINTS[i]}
+                    className="w-full h-full min-h-40"
+                  />
+                )}
               </div>
             );
           })}

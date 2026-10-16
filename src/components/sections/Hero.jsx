@@ -103,6 +103,7 @@ export default function Hero() {
               path={heroSrc}
               alt="A beautifully decorated surprise setup"
               className="w-full aspect-3/2 ribbon-border"
+              loading="eager"
             />
             {/* <ImagePlaceholder
               src={heroSrc}

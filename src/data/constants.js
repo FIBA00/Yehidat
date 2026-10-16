@@ -43,48 +43,65 @@ export const OCCASIONS = [
 // Replace src with real image/video paths.
 // e.g. import g1 from '../assets/images/gallery-1.jpg' then src: g1
 
-import cake_avif from "../../public/images/avif/assets_hero_cake.avif";
-import cake_webp from "../../public/images/avif/assets_hero_cake.webp";
-
-import hbd_avif from "../../public/images/avif/assets_hero_banner.avif";
-import hbd_webp from "../../public/images/avif/assets_hero_banner.webp";
-
-import suprise_2_avif from "../../public/images/avif/assets_suprise_2.avif";
-import suprise_2_webp from "../../public/images/avif/assets_suprise_2.webp";
-
-import yehidatBanner_webp from "../../public/images/webp/assets_suprise_2.webp";
-import yehidatBanner_avif from "../../public/images/avif/assets_suprise_2.avif";
+// ---ICONS---
+export const yehidatIcon = "/icons/icon_navbar1.png";
 
 export const GALLERY_ITEMS = [
   {
     id: 1,
+    name: "hbd",
     type: "image",
-    src: hbd_avif || hbd_webp,
+    src: {
+      avif: "/images/avif/assets_hero_banner.avif",
+      webp: "/images/webp/assets_hero_banner.webp",
+    },
     alt: "Birthday surprise setup",
     large: true,
   },
   {
     id: 2,
+    name: "suprise",
     type: "image",
-    src: suprise_2_avif || suprise_2_webp,
+    src: {
+      avif: "/images/avif/assets_suprise_2.avif",
+      webp: "/images/webp/assets_suprise_2.webp",
+    },
     alt: "Flower arrangement",
     large: false,
   },
   {
     id: 3,
+    name: "cake",
     type: "image",
-    src: cake_avif || cake_webp,
+    src: {
+      avif: "/images/avif/assets_hero_cake.avif",
+      webp: "/images/webp/assets_hero_cake.webp",
+    },
     alt: "Cake decoration",
     large: false,
   },
   {
     id: 4,
+    name: "banner",
     type: "image",
-    src: yehidatBanner_avif || yehidatBanner_webp,
+    src: {
+      avif: "/images/avif/assets_banner_with_candles.avif",
+      webp: "/images/webp/assets_banner_with_candles.webp",
+    },
     alt: "Anniversary decoration",
     large: false,
   },
-  { id: 5, type: "image", src: null, alt: "Balloon setup", large: false },
+  {
+    id: 5,
+    name: "",
+    type: "image",
+    src: {
+      avif: "",
+      webp: "",
+    },
+    alt: "Balloon setup",
+    large: false,
+  },
 ];
 
 // Replace with real face image paths (64×64px circular portraits)

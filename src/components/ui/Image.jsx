@@ -1,16 +1,29 @@
 import React from "react";
 
-// Assumes images are named consistently and located in your public/ directory
-// e.g., /public/images/hero.avif, /public/images/hero.webp, etc.
-const ResponsiveImage = ({ path,  alt, className }) => {
+export default function ResponsiveImage({
+  path,
+  alt,
+  className = "",
+  loading = "lazy",
+}) {
+  if (!path) return null;
 
   return (
     <picture className={className}>
-      <source srcSet={`${path}.avif`} type="image/avif" />
-      <source srcSet={`${path}.webp`} type="image/webp" />
-      <img src={`${path}.jpg`} alt={alt} loading="lazy" />
+      {path.avif && (
+        <source srcSet={path.avif} type="image/avif" />
+      )}
+
+      {path.webp && (
+        <source srcSet={path.webp} type="image/webp" />
+      )}
+
+      <img
+        src={path.webp || path.avif}
+        alt={alt}
+        loading={loading}
+        className="w-full h-full object-cover"
+      />
     </picture>
   );
-};
-
-export default ResponsiveImage;
+}
