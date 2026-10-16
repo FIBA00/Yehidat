@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
-
-import yehidatIcon from "../../assets/icon_navbar1.png";
+import { yehidatIcon } from "../../data/constants";
 
 const NAV_KEYS = [
   { key: "occasions", href: "#occasions" },

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+assets_original/
+output_avif/
+output_webp/
+branding/
