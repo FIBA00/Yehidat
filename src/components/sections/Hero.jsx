@@ -10,7 +10,8 @@ import ResponsiveImage from "../ui/Image.jsx";
 const ROTATION_INTERVAL = 3000;
 
 const HERO_SLIDES = GALLERY_ITEMS.filter(
-  (item) => item.type === "image" && item.src && (item.src.avif || item.src.webp),
+  (item) =>
+    item.type === "image" && item.src && (item.src.avif || item.src.webp),
 );
 
 export default function Hero() {
@@ -45,7 +46,9 @@ export default function Hero() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   function showPreviousSlide() {
-    setActiveIndex((index) => (index - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    setActiveIndex(
+      (index) => (index - 1 + HERO_SLIDES.length) % HERO_SLIDES.length,
+    );
   }
 
   function showNextSlide() {
@@ -63,15 +66,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            
-
             <h1 className="display-heading mb-5">
               {t("hero.titleLine1")}{" "}
               <span className="italic font-display text-gold-deep">
                 {t("hero.titleEmphasis")}
               </span>
             </h1>
-<div className="inline-flex items-center gap-2 bg-gold-pale border border-gold-edge/55 rounded-full px-4 py-1.5 mb-5 ">
+            <div className="inline-flex items-center gap-2 bg-gold-pale border border-gold-edge/55 rounded-full px-4 py-1.5 mb-5 ">
               <span className="w-1.5 h-1.5 rounded-full bg-gold" />
               <span className="text-[11px] font-semibold text-gold-deep tracking-wide uppercase">
                 {t("hero.tag")}
@@ -95,7 +96,7 @@ export default function Hero() {
                 {t("hero.ctaSecondary")}
               </button>
             </div>
-              
+
             <div className="flex items-center gap-3 mt-9">
               <div className="flex">
                 {TRUST_FACES.map((src, index) => (
@@ -104,7 +105,11 @@ export default function Hero() {
                     className="w-8 h-8 rounded-full border-2 border-parchment overflow-hidden -ml-2 first:ml-0 bg-linear-to-br from-gold to-gold-deep flex items-center justify-center text-xs font-semibold text-ink"
                   >
                     {src ? (
-                      <img src={src} alt="" className="w-full h-full object-cover" />
+                      <img
+                        src={src}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
                     ) : (
                       "✦"
                     )}
@@ -115,7 +120,9 @@ export default function Hero() {
                 </div>
               </div>
               <p className="text-sm text-ink-muted">
-                <strong className="text-ink font-semibold">{t("hero.trustCount")}</strong>{" "}
+                <strong className="text-ink font-semibold">
+                  {t("hero.trustCount")}
+                </strong>{" "}
                 {t("hero.trustLabel")}
               </p>
             </div>
@@ -189,7 +196,9 @@ export default function Hero() {
                         type="button"
                         onClick={() => setActiveIndex(index)}
                         aria-label={`Show project ${index + 1}`}
-                        aria-current={index === activeIndex ? "true" : undefined}
+                        aria-current={
+                          index === activeIndex ? "true" : undefined
+                        }
                         className={`h-2.5 rounded-full border border-white/80 transition-all focus-visible:outline-2 focus-visible:outline-gold ${
                           index === activeIndex
                             ? "w-7 bg-white"
@@ -210,7 +219,9 @@ export default function Hero() {
                 <p className="text-[10px] text-ink-muted leading-none mb-0.5">
                   {t("hero.badgeLabel")}
                 </p>
-                <p className="text-sm font-semibold text-ink">{t("hero.badgeValue")}</p>
+                <p className="text-sm font-semibold text-ink">
+                  {t("hero.badgeValue")}
+                </p>
               </div>
             </div>
           </motion.div>

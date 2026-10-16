@@ -21,80 +21,172 @@ export const SOCIAL = {
 };
 
 export const PACKAGES = [
-  { id: "basic", price: 4000, deposit: 1000, featured: false },
-  { id: "standard", price: 6000, deposit: 1500, featured: true },
-  { id: "premium", price: 10000, deposit: 2500, featured: false },
+  { id: "basic", price: 3999, deposit: 2000, featured: false },
+  { id: "standard", price: 5999, deposit: 2500, featured: true },
+  { id: "premium", price: 9999, deposit: 4500, featured: false },
 ];
 
+// TODO: convert the images to webp and avif from png later.
 export const OCCASIONS = [
-  { id: "birthday", emoji: "🎂" },
-  { id: "anniversary", emoji: "💍" },
-  { id: "graduation", emoji: "🎓" },
-  { id: "valentines", emoji: "💝" },
-  { id: "fathersDay", emoji: "👨‍👩‍👧" },
-  { id: "mothersDay", emoji: "💐" },
-  { id: "promotion", emoji: "🎉" },
-  { id: "justBecause", emoji: "✨" },
+  {
+    id: "birthday",
+    emoji: "🎂",
+    src: "/occasions/birthday.png",
+    alt: "Birthday Occasion",
+  },
+  {
+    id: "anniversary",
+    emoji: "💍",
+    src: "/occasions/anniversary.png",
+    alt: "Anniversary Occasion",
+  },
+  {
+    id: "graduation",
+    emoji: "🎓",
+    src: "/occasions/graduation.png",
+    alt: "Graduation",
+  },
+  {
+    id: "fathersDay",
+    emoji: "👨‍👩‍👧",
+    src: "/occasions/fathersDay.png",
+    alt: "Fathers Day",
+  },
+
+  {
+    id: "mothersDay",
+    emoji: "💐",
+    src: "/occasions/mothersDay.png",
+    alt: "Mothers day",
+  },
+
+  {
+    id: "promotion",
+    emoji: "🎉",
+    src: "/occasions/promotion.png",
+    alt: "Promotion",
+  },
+  {
+    id: "justBecause",
+    emoji: "✨",
+    src: "/occasions/justBecause.png",
+    alt: "Be happy just because",
+  },
 ];
 
-export const yehidatIcon = "/icons/icon_navbar1.png";
+export const yehidatIcon = "/icons/assets_icon_navbar1.png";
 
 export const GALLERY_ITEMS = [
   {
     id: 1,
-    name: "hbd",
     type: "image",
     src: {
-      avif: "/images/avif/assets_hero_banner.avif",
-      webp: "/images/webp/assets_hero_banner.webp",
+      avif: "/images/avif/image_1.avif",
+      webp: "/images/webp/image_1.webp",
     },
-    alt: "Birthday surprise setup",
+    alt: "Previous Suprise 1",
     large: true,
   },
   {
     id: 2,
-    name: "suprise",
+
     type: "image",
     src: {
-      avif: "/images/avif/assets_suprise_2.avif",
-      webp: "/images/webp/assets_suprise_2.webp",
+      avif: "/images/avif/image_2.avif",
+      webp: "/images/webp/image_2.webp",
     },
-    alt: "Flower arrangement",
+    alt: "Previous Suprise 2",
     large: true,
   },
   {
     id: 3,
-    name: "cake",
+
     type: "image",
     src: {
-      avif: "/images/avif/assets_hero_cake.avif",
-      webp: "/images/webp/assets_hero_cake.webp",
+      avif: "/images/avif/image_3.avif",
+      webp: "/images/webp/image_3.webp",
     },
-    alt: "Cake decoration",
+    alt: "Previous Suprise 3",
     large: true,
   },
   {
     id: 4,
-    name: "banner",
+
     type: "image",
     src: {
-      avif: "/images/avif/assets_banner_with_candles.avif",
-      webp: "/images/webp/assets_banner_with_candles.webp",
+      avif: "/images/avif/image_4.avif",
+      webp: "/images/webp/image_4.webp",
     },
-    alt: "Anniversary decoration",
+    alt: "Previous Suprise 4",
     large: true,
   },
   {
     id: 5,
-    name: "balloons",
     type: "image",
     src: {
-      avif: "/images/avif/assets_hero_cake.avif",
-      webp: "/images/webp/assets_hero_cake.webp",
+      avif: "/images/avif/image_5.avif",
+      webp: "/images/webp/image_5.webp",
     },
-    alt: "Balloon setup",
+    alt: "Previous Suprise 5",
     large: true,
   },
+
+  // {
+  //   id: 7,
+  //   ",
+  //   type: "image",
+  //   src: {
+  //     avif: "/images/avif/IMG_6343.avif",
+  //     webp: "/images/webp/IMG_6343.webp",
+  //   },
+  //   alt: "Previous suprise",
+  //   large: true,
+  // },
+  // {
+  //   id: 8,
+  //
+  //   type: "image",
+  //   src: {
+  //     avif: "/images/avif/IMG_6344.avif",
+  //     webp: "/images/webp/IMG_6344.webp",
+  //   },
+  //   alt: "Previous suprise",
+  //   large: true,
+  // },
+
+  // {
+  //   id: 9,
+  //
+  //   type: "image",
+  //   src: {
+  //     avif: "/images/avif/IMG_6345.avif",
+  //     webp: "/images/webp/IMG_6345.webp",
+  //   },
+  //   alt: "Previous suprise",
+  //   large: true,
+  // },
+  // {
+  //   id: 10,
+  //
+  //   type: "image",
+  //   src: {
+  //     avif: "/images/avif/IMG_6346.avif",
+  //     webp: "/images/webp/IMG_6346.webp",
+  //   },
+  //   alt: "Previous suprise",
+  //   large: true,
+  // },
+  // {
+  //   id: 11,
+  //
+  //   type: "image",
+  //   src: {
+  //     avif: "/images/avif/IMG_6341.avif",
+  //     webp: "/images/webp/IMG_6341.webp",
+  //   },
+  //   alt: "Previous suprise",
+  //   large: true,
+  // },
 ];
 
 // TODO: add images of the owners here

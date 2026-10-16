@@ -57,12 +57,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.875rem 1.75rem;
-    border-radius: 9999px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
     background: var(--color-gold);
     color: var(--color-ink);
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.6rem;
     transition: all 0.2s;
     box-shadow: 0 4px 20px rgba(245, 197, 24, 0.45);
   }

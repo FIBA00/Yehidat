@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { PACKAGES } from "../../data/constants";
 import { useAppStore } from "../../store/useAppStore";
@@ -17,7 +18,7 @@ function PackageCard({ pkg, delay }) {
   return (
     <Reveal
       delay={delay}
-      className={`relative rounded-2xl p-8 transition-transform duration-200 hover:-translate-y-1 ${
+      className={`relative rounded-2xl p-6 h-100 sm:h-160 sm:w-100 sm:w-auto transition-transform duration-200 hover:-translate-y-1 ${
         pkg.featured
           ? "bg-ink text-parchment border border-gold-edge/55"
           : "bg-parchment ribbon-border"
@@ -28,31 +29,19 @@ function PackageCard({ pkg, delay }) {
           {t("packages.mostPopular")}
         </div>
       )}
-
-      <p
-        className={`font-display font-bold text-lg mb-1 ${pkg.featured ? "text-gold" : "text-ink"}`}
-      >
-        {t(`packages.${pkg.id}.name`)}
-      </p>
-
+    <div className="flex-col place-items-center">
+      <p className={`font-display font-bold text-lg mb-1 ${pkg.featured ? "text-gold" : "text-ink"}`}> {t(`packages.${pkg.id}.name`)} </p>
       <div className="flex items-baseline gap-1 mb-2">
         <span
-          className={`text-sm font-semibold ${pkg.featured ? "text-gold" : "text-gold-deep"}`}
-        >
-          ETB
-        </span>
+          className={`text-sm font-semibold ${pkg.featured ? "text-gold" : "text-gold-deep"}`} > ETB </span>
         <span
           className={`font-display font-bold leading-none text-4xl ${pkg.featured ? "text-gold" : "text-ink"}`}
-        >
-          {pkg.price.toLocaleString()}
-        </span>
+        >{pkg.price.toLocaleString()}</span>
       </div>
 
       <p
-        className={`text-sm mb-6 leading-relaxed ${pkg.featured ? "text-parchment/70" : "text-ink-muted"}`}
-      >
-        {t(`packages.${pkg.id}.description`)}
-      </p>
+        className={`text-sm mb-7 leading-relaxed ${pkg.featured ? "text-parchment/70" : "text-ink-muted"}`}
+      >{t(`packages.${pkg.id}.description`)}</p>
 
       <ul className="flex flex-col gap-2.5 mb-7">
         {items.map((item) => (
@@ -67,19 +56,22 @@ function PackageCard({ pkg, delay }) {
           </li>
         ))}
       </ul>
+    </div>
 
-      <button
-        onClick={handleSelect}
-        className={`w-full justify-center ${pkg.featured ? "btn-gold" : "btn-outline"}`}
-      >
-        {t("packages.getStarted")}
-      </button>
+      <div className="flex-col">
+        <button
+          onClick={handleSelect}
+          className={`w-full justify-center ${pkg.featured ? "btn-gold" : "btn-outline"}`}
+        >
+          {t("packages.getStarted")}
+        </button>
 
-      <p
-        className={`text-center text-[11px] mt-3 ${pkg.featured ? "text-parchment/40" : "text-ink-muted"}`}
-      >
-        {t("packages.depositNote", { amount: pkg.deposit.toLocaleString() })}
-      </p>
+        <p
+          className={`text-center text-[11px] mt-3 ${pkg.featured ? "text-parchment/40" : "text-ink-muted"}`}
+        >
+          {t("packages.depositNote", { amount: pkg.deposit.toLocaleString() })}
+        </p>
+      </div>
     </Reveal>
   );
 }

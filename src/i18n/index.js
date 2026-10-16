@@ -4,6 +4,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./locales/en.json";
 import am from "./locales/am.json";
+import oro from "./locales/oro.json";
+
 
 i18n
   .use(LanguageDetector)
@@ -12,9 +14,11 @@ i18n
     resources: {
       en: { translation: en },
       am: { translation: am },
+      oro: { translation: oro },
+
     },
     fallbackLng: "en",
-    supportedLngs: ["en", "am"],
+    supportedLngs: ["en", "am", "oro"],
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "navigator"],
