@@ -38,7 +38,7 @@ export default function ResponsiveImage({
   }
 
   return (
-    <picture className={className}>
+    <picture className={`block ${className}`}>
       {imagePath.avif && <source srcSet={imagePath.avif} type="image/avif" />}
       {imagePath.webp && <source srcSet={imagePath.webp} type="image/webp" />}
       {imagePath.png && <source srcSet={imagePath.png} type="image/png" />}

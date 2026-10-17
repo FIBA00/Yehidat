@@ -53,7 +53,7 @@ export default function Navbar() {
   useEffect(() => setMenuOpen(false), [pathname]);
 
   const handleAnchor = (href) => (e) => {
-    if (isHome && href.startsWith("#")) {
+    if (href.startsWith("#")) {
       e.preventDefault();
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false);
@@ -87,7 +87,7 @@ export default function Navbar() {
             {NAV_KEYS.map(({ key, href }) => (
               <a
                 key={key}
-                href={isHome ? href : `${baseUrl}${href}`}
+                href={href}
                 onClick={handleAnchor(href)}
                 className="text-sm font-medium text-ink-soft hover:text-ink transition-colors duration-150"
               >
@@ -99,7 +99,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
             <a
-              href={isHome ? "#contact" : `${baseUrl}#contact`}
+              href="#contact"
               onClick={handleAnchor("#contact")}
               className="btn-gold text-sm"
             >
@@ -143,7 +143,7 @@ export default function Navbar() {
               {NAV_KEYS.map(({ key, href }) => (
                 <a
                   key={key}
-                  href={isHome ? href : `${baseUrl}${href}`}
+                  href={href}
                   onClick={handleAnchor(href)}
                   className="text-base font-medium text-ink-soft py-1"
                 >
@@ -151,7 +151,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href={isHome ? "#contact" : `${baseUrl}#contact`}
+                href="#contact"
                 onClick={handleAnchor("#contact")}
                 className="btn-gold text-center text-sm mt-1"
               >
