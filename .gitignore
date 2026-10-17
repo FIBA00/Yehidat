@@ -26,3 +26,5 @@ assets_original/
 output_avif/
 output_webp/
 branding/
+.env
+.env*
