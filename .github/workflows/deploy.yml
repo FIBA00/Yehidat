@@ -14,8 +14,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run build
+      - run: npm install -g pnpm
+      - run: npm ci
+      - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
