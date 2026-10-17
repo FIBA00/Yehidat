@@ -20,7 +20,12 @@ export const SOCIAL = {
   TELEGRAM: "#",
 };
 
-const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+export const withBase = (path) => {
+  const base = import.meta.env.BASE_URL || "/";
+  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanPath = path.replace(/^\//, "");
+  return `${cleanBase}${cleanPath}`;
+};
 
 export const PACKAGES = [
   { id: "basic", price: 3999, deposit: 2000, featured: false },
