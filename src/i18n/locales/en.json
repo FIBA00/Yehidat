@@ -4,7 +4,8 @@
     "how": "How it works",
     "packages": "Packages",
     "gallery": "Gallery",
-    "cta": "Plan a Surprise"
+    "cta": "Plan a Surprise",
+    "about": "About us"
   },
   "hero": {
     "tag": "Surprise Specialists · Addis Ababa & Surroundings",
@@ -119,6 +120,18 @@
   },
   "seo": {
     "title": "Yehidat — Surprise Planning in Addis Ababa",
-    "description": "Yehidat plans surprise birthdays, anniversaries, graduations and more in Addis Ababa and surrounding areas. Packages from 4,000 ETB. We handle every detail."
+    "description": "Yehidat plans surprise birthdays, anniversaries, graduations and more in Addis Ababa and surrounding areas. Packages from 4,000 ETB. We handle every detail.",
+    "about": {
+      "title": "About Yehidat — Our Team | Surprise Planning in Addis Ababa",
+      "description": "Meet the Yehidat team. Surprise planners based in Dukem/Bishoftu, serving Addis Ababa and surrounding areas."
+    }
+  },
+  "about": {
+    "eyebrow": "About Yehidat",
+    "title": "The team behind every surprise",
+    "intro": "We are a small team based in Dukem/Bishoftu, planning surprises for people across Addis Ababa and surrounding areas. From your first call to the moment they walk in, we handle every detail so you can just enjoy it.",
+    "howTitle": "How we work",
+    "ctaTitle": "Ready to plan one?",
+    "ctaButton": "Start your surprise"
   }
 }
