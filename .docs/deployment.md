@@ -29,6 +29,26 @@ Output goes to `dist/`:
 - `dist/images/`, `dist/icons/`, `dist/occasions/`, `dist/banner/`, `dist/site.webmanifest`
   — copied from `public/`
 
+### Prerendering (phase 2)
+
+`pnpm run build` runs three steps:
+
+1. `vite build` builds the browser bundle into `dist/`.
+2. `vite build --ssr src/entry-server.jsx --outDir dist-ssr` builds a server bundle
+   that can render the app to HTML.
+3. `node scripts/prerender.mjs` renders `/`, `/am/`, and `/om/` into static files
+   (`dist/index.html`, `dist/am/index.html`, `dist/om/index.html`). Each file has
+   the page text in its language and its own `<title>`, description, canonical,
+   Open Graph, and `hreflang` tags. It also writes `dist/404.html`, an English
+   fallback for GitHub Pages.
+
+Crawlers that don't run JavaScript get the real page text. In the browser,
+`src/main.jsx` hydrates the prerendered HTML and sets the language from the URL
+before hydrating, so the first render matches the server output.
+
+Pages in the prerender list are defined in `scripts/prerender.mjs` (`ROUTES`).
+Add a route there when you add a page.
+
 ### Base path
 
 `vite.config.js` sets:
