@@ -1,0 +1,378 @@
+{
+  "items": [
+    {
+      "id": "01-birthday-in-pharmacy",
+      "alt": "Birthday in pharmacy",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/01-birthday-in-pharmacy-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/01-birthday-in-pharmacy-800w.webp"
+        },
+        {
+          "w": 842,
+          "src": "images/gallery/webp/01-birthday-in-pharmacy.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/01-birthday-in-pharmacy-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/01-birthday-in-pharmacy-800w.avif"
+        },
+        {
+          "w": 842,
+          "src": "images/gallery/avif/01-birthday-in-pharmacy.avif"
+        }
+      ],
+      "width": 842,
+      "height": 1867
+    },
+    {
+      "id": "02-birthday-cake-testing",
+      "alt": "Birthday cake testing",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/02-birthday-cake-testing-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/02-birthday-cake-testing-800w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/gallery/webp/02-birthday-cake-testing.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/02-birthday-cake-testing-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/02-birthday-cake-testing-800w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/gallery/avif/02-birthday-cake-testing.avif"
+        }
+      ],
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "id": "03-birthday-cake-flare",
+      "alt": "Birthday cake flare",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/03-birthday-cake-flare-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/03-birthday-cake-flare-800w.webp"
+        },
+        {
+          "w": 941,
+          "src": "images/gallery/webp/03-birthday-cake-flare.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/03-birthday-cake-flare-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/03-birthday-cake-flare-800w.avif"
+        },
+        {
+          "w": 941,
+          "src": "images/gallery/avif/03-birthday-cake-flare.avif"
+        }
+      ],
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "id": "04-birthday-in-grocerry",
+      "alt": "Birthday in grocery",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/04-birthday-in-grocerry-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/04-birthday-in-grocerry-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/04-birthday-in-grocerry.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/04-birthday-in-grocerry-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/04-birthday-in-grocerry-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/04-birthday-in-grocerry.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "id": "04-birthday-in-grocery",
+      "alt": "Birthday in grocery",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/04-birthday-in-grocery-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/04-birthday-in-grocery-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/04-birthday-in-grocery.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/04-birthday-in-grocery-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/04-birthday-in-grocery-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/04-birthday-in-grocery.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "id": "05-birthday-lady",
+      "alt": "Birthday lady",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/05-birthday-lady-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/05-birthday-lady-800w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/gallery/webp/05-birthday-lady.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/05-birthday-lady-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/05-birthday-lady-800w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/gallery/avif/05-birthday-lady.avif"
+        }
+      ],
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "id": "06-birthday-lady",
+      "alt": "Birthday lady",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/06-birthday-lady-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/06-birthday-lady-800w.webp"
+        },
+        {
+          "w": 941,
+          "src": "images/gallery/webp/06-birthday-lady.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/06-birthday-lady-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/06-birthday-lady-800w.avif"
+        },
+        {
+          "w": 941,
+          "src": "images/gallery/avif/06-birthday-lady.avif"
+        }
+      ],
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "id": "07-birthday-cake",
+      "alt": "Birthday cake",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/07-birthday-cake-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/07-birthday-cake-800w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/gallery/webp/07-birthday-cake.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/07-birthday-cake-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/07-birthday-cake-800w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/gallery/avif/07-birthday-cake.avif"
+        }
+      ],
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "id": "08-birthday-outdoor",
+      "alt": "Birthday outdoor",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/08-birthday-outdoor-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/08-birthday-outdoor-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/08-birthday-outdoor.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/08-birthday-outdoor-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/08-birthday-outdoor-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/08-birthday-outdoor.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "id": "09-birthday-in-groceerry",
+      "alt": "Birthday in grocery",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/09-birthday-in-groceerry-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/09-birthday-in-groceerry-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/09-birthday-in-groceerry.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/09-birthday-in-groceerry-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/09-birthday-in-groceerry-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/09-birthday-in-groceerry.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "id": "09-birthday-in-grocery",
+      "alt": "Birthday in grocery",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/09-birthday-in-grocery-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/09-birthday-in-grocery-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/09-birthday-in-grocery.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/09-birthday-in-grocery-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/09-birthday-in-grocery-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/09-birthday-in-grocery.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 1600
+    }
+  ]
+}
