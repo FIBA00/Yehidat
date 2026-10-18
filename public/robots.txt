@@ -1,0 +1,21 @@
+# Yehidat robots policy.
+# Search engines and AI bots, including training crawlers, are allowed.
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://yehidat.vercel.app/sitemap.xml

@@ -7,7 +7,7 @@
     "cta": "Plan a Surprise"
   },
   "hero": {
-    "tag": "Addis Ababa's Surprise Specialists",
+    "tag": "Surprise Specialists · Addis Ababa & Surroundings",
     "titleLine1": "Surprises that make them",
     "titleEmphasis": "cry happy tears",
     "subtitle": "You tell us who to surprise and when. We handle every detail — flowers, cake, decor, venue — and deliver a moment they'll never forget.",
@@ -112,9 +112,13 @@
     "submitAnother": "Submit another"
   },
   "footer": {
-    "brandDesc": "Addis Ababa's dedicated surprise planning team. We turn your love into moments they'll never forget.",
+    "brandDesc": "Surprise planning team based in Dukem/Bishoftu, serving Addis Ababa and surrounding areas. We turn your love into moments they'll never forget.",
     "quickLinks": "Quick links",
     "contact": "Contact",
     "rights": "All rights reserved."
+  },
+  "seo": {
+    "title": "Yehidat — Surprise Planning in Addis Ababa",
+    "description": "Yehidat plans surprise birthdays, anniversaries, graduations and more in Addis Ababa and surrounding areas. Packages from 4,000 ETB. We handle every detail."
   }
 }
