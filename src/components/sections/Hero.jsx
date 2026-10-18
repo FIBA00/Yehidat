@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "motion/react";
 
+// ! internal imports
 import { TRUST_FACES } from "../../data/constants";
 import { HERO_PHOTOS } from "../../data/gallery";
 import { useAppStore } from "../../store/useAppStore";

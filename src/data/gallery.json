@@ -137,6 +137,40 @@
       "height": 900
     },
     {
+      "id": "04-birthday-in-grocery",
+      "alt": "Birthday in grocery",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/04-birthday-in-grocery-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/04-birthday-in-grocery-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/04-birthday-in-grocery.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/04-birthday-in-grocery-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/04-birthday-in-grocery-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/04-birthday-in-grocery.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    },
+    {
       "id": "05-birthday-lady",
       "alt": "Birthday lady",
       "webp": [
@@ -301,6 +335,40 @@
         {
           "w": 1200,
           "src": "images/gallery/avif/09-birthday-in-groceerry.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "id": "09-birthday-in-grocery",
+      "alt": "Birthday in grocery",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/gallery/webp/09-birthday-in-grocery-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/webp/09-birthday-in-grocery-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/webp/09-birthday-in-grocery.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/gallery/avif/09-birthday-in-grocery-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/gallery/avif/09-birthday-in-grocery-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/gallery/avif/09-birthday-in-grocery.avif"
         }
       ],
       "width": 1200,
