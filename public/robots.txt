@@ -1,17 +1,21 @@
-# Yehidat robots policy
-# Search engines and link previews are allowed.
+# Yehidat robots policy.
+# Search engines and AI bots, including training crawlers, are allowed.
 User-agent: *
 Allow: /
 
-# AI training crawlers. Uncomment to opt out of model training.
-# Search and citation features may still depend on these bots.
-# User-agent: GPTBot
-# Disallow: /
-#
-# User-agent: ClaudeBot
-# Disallow: /
-#
-# User-agent: Google-Extended
-# Disallow: /
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://yehidat.vercel.app/sitemap.xml
