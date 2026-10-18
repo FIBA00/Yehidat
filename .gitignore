@@ -32,3 +32,7 @@ branding/
 # Gallery originals: large photos stay out of git. The converted files
 # (public/images/gallery and src/data/gallery.json) are committed instead.
 src/assets/gallery/
+
+# About page team photo: raw file stays out of git, converted output is committed.
+src/assets/about/*
+!src/assets/about/*.txt

@@ -7,7 +7,7 @@ import path from "node:path";
 
 const DIST = path.resolve("dist");
 const SSR_ENTRY = path.resolve("dist-ssr/entry-server.js");
-const ROUTES = ["/", "/am/", "/om/"];
+const ROUTES = ["/", "/am/", "/om/", "/about-us/", "/am/about-us/", "/om/about-us/"];
 
 // Tags that headTags() owns. They are removed from the template first, so
 // the output never has two titles, descriptions, or canonical links.
@@ -37,8 +37,8 @@ async function main() {
   const { render, headTags } = await import(pathToFileURL(SSR_ENTRY).href);
 
   for (const url of ROUTES) {
-    const { html, locale } = await render(url);
-    const page = buildPage(template, html, locale, headTags(locale));
+    const { html, locale, page: pagePathname } = await render(url);
+    const page = buildPage(template, html, locale, headTags(locale, pagePathname));
     const outDir = path.join(DIST, url);
     await mkdir(outDir, { recursive: true });
     await writeFile(path.join(outDir, "index.html"), page);

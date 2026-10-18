@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
+import { localeFromPath, localizedPath } from "../../i18n/routes";
 import { CONTACT, SOCIAL } from "../../data/constants";
 
 const QUICK_LINK_KEYS = [
@@ -6,9 +8,12 @@ const QUICK_LINK_KEYS = [
   { key: "how", href: "#how" },
   { key: "packages", href: "#packages" },
   { key: "gallery", href: "#gallery" },
+  { key: "about", href: "/about-us" },
 ];
 
 export default function Footer() {
+  const { pathname } = useLocation();
+  const locale = localeFromPath(pathname);
   const { t } = useTranslation();
 
   return (
@@ -32,7 +37,7 @@ export default function Footer() {
               {QUICK_LINK_KEYS.map(({ key, href }) => (
                 <li key={key}>
                   <a
-                    href={href}
+                    href={href.startsWith("/") ? localizedPath(locale, href) : href}
                     className="text-sm text-parchment/65 hover:text-gold transition-colors duration-150"
                   >
                     {t(`nav.${key}`)}

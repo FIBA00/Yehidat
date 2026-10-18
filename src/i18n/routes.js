@@ -32,5 +32,12 @@ export function pagePath(pathname = "/") {
 // Builds the URL for a page in a language: localizedPath("am", "/") -> "/am/".
 export function localizedPath(locale, page = "/") {
   const prefix = LOCALES[locale]?.prefix ?? "";
-  return page === "/" ? `${prefix}/` : `${prefix}${page}`;
+  const clean = normalizePage(page);
+  return clean === "/" ? `${prefix}/` : `${prefix}${clean}/`;
+}
+
+// "/about-us", "/about-us/" -> "/about-us". "/" stays "/".
+export function normalizePage(page = "/") {
+  const trimmed = page.replace(/\/+$/, "");
+  return trimmed === "" ? "/" : trimmed;
 }

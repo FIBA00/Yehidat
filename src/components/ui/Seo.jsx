@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { LOCALES, ORIGIN, localizedPath } from "../../i18n/routes";
+import { pageSeo } from "../../seo/pages";
 
-// Keeps <head> in sync with the current language.
+// Keeps <head> in sync with the current language and page.
 // It updates existing tags in place, so no duplicates are created.
-// Browsers and Google render this. AI crawlers that skip JavaScript see the
-// English tags in index.html until build-time pre-rendering lands.
+// Prerendered pages already have these tags; this keeps them correct when
+// the user switches language in the browser.
 
 function setMeta(attr, key, content) {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`);
@@ -27,7 +28,7 @@ function setCanonical(href) {
   el.href = href;
 }
 
-function setAlternates() {
+function setAlternates(page) {
   document.head
     .querySelectorAll('link[rel="alternate"][data-seo="alternate"]')
     .forEach((n) => n.remove());
@@ -42,19 +43,20 @@ function setAlternates() {
   };
 
   for (const [locale, cfg] of Object.entries(LOCALES)) {
-    add(cfg.htmlLang, ORIGIN + localizedPath(locale));
+    add(cfg.htmlLang, ORIGIN + localizedPath(locale, page));
   }
-  add("x-default", ORIGIN + "/");
+  add("x-default", ORIGIN + localizedPath("en", page));
 }
 
-export default function Seo({ locale }) {
+export default function Seo({ locale, page = "/" }) {
   const { t } = useTranslation();
 
   useEffect(() => {
+    const keys = pageSeo(page);
     // Explicit lng keeps this correct even before i18n finishes switching.
-    const title = t("seo.title", { lng: locale });
-    const description = t("seo.description", { lng: locale });
-    const url = ORIGIN + localizedPath(locale);
+    const title = t(keys.titleKey, { lng: locale });
+    const description = t(keys.descriptionKey, { lng: locale });
+    const url = ORIGIN + localizedPath(locale, page);
 
     document.title = title;
     setMeta("name", "description", description);
@@ -65,8 +67,8 @@ export default function Seo({ locale }) {
     setMeta("property", "og:locale", LOCALES[locale].ogLocale);
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
-    setAlternates();
-  }, [locale, t]);
+    setAlternates(page);
+  }, [locale, page, t]);
 
   return null;
 }

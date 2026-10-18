@@ -2,7 +2,7 @@ import { renderToString } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { QueryClientProvider } from "@tanstack/react-query";
 import i18n from "./i18n";
-import { localeFromPath } from "./i18n/routes";
+import { localeFromPath, pagePath } from "./i18n/routes";
 import { queryClient } from "./lib/queryClient.js";
 import App from "./App.jsx";
 export { headTags } from "./seo/headTags.js";
@@ -21,5 +21,5 @@ export async function render(url) {
     </MemoryRouter>,
   );
 
-  return { html, locale };
+  return { html, locale, page: pagePath(url) };
 }

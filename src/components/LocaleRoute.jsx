@@ -4,7 +4,8 @@ import { LOCALES } from "../i18n/routes";
 import Seo from "./ui/Seo";
 
 // Wraps a page so its language comes from the URL, not from user state.
-export default function LocaleRoute({ locale, children }) {
+// `page` is the page path without the language prefix, e.g. "/about-us".
+export default function LocaleRoute({ locale, page = "/", children }) {
   const { i18n } = useTranslation();
 
   useLayoutEffect(() => {
@@ -14,7 +15,7 @@ export default function LocaleRoute({ locale, children }) {
 
   return (
     <>
-      <Seo locale={locale} />
+      <Seo locale={locale} page={page} />
       {children}
     </>
   );
