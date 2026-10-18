@@ -29,3 +29,8 @@ branding/
 .env
 .env*
 *.patch
+# Gallery originals: large photos stay out of git. The converted files
+# (public/images/gallery and src/data/gallery.json) are committed instead.
+src/assets/gallery/*
+!src/assets/gallery/.gitkeep
+!src/assets/gallery/*.txt

@@ -3,16 +3,18 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "motion/react";
 
-import { TRUST_FACES, GALLERY_ITEMS } from "../../data/constants";
+import { TRUST_FACES } from "../../data/constants";
+import { HERO_PHOTOS } from "../../data/gallery";
 import { useAppStore } from "../../store/useAppStore";
 import ResponsiveImage from "../ui/Image.jsx";
 
 const ROTATION_INTERVAL = 3000;
 
-const HERO_SLIDES = GALLERY_ITEMS.filter(
-  (item) =>
-    item.type === "image" && item.src && (item.src.avif || item.src.webp),
-);
+const HERO_SLIDES = HERO_PHOTOS.map((photo) => ({
+  id: photo.id,
+  alt: photo.alt,
+  src: { avif: photo.avif, webp: photo.webp },
+}));
 
 export default function Hero() {
   const { t } = useTranslation();

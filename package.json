@@ -9,7 +9,8 @@
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gallery": "python3 scripts/convert_images.py --gallery --manifest src/data/gallery.json --prune"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
