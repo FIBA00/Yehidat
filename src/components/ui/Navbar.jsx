@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { localeFromPath, localizedPath, pagePath } from "../../i18n/routes";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
 import { yehidatIcon } from "../../data/constants";
@@ -13,18 +14,19 @@ const NAV_KEYS = [
 ];
 
 function LanguageSwitcher() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language?.startsWith("am")
-    ? "am"
-    : i18n.language?.startsWith("oro")
-      ? "oro"
-      : "en";
-  const changeLanguage = (e) => i18n.changeLanguage(e.target.value);
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const current = localeFromPath(pathname);
+
+  // The URL is the source of truth: switching language changes the path.
+  const onChange = (e) => {
+    navigate(localizedPath(e.target.value, pagePath(pathname)));
+  };
 
   return (
     <select
-      value={currentLanguage}
-      onChange={changeLanguage}
+      value={current}
+      onChange={onChange}
       className="text-xs font-semibold text-ink-soft border border-gold rounded-full px-3 py-1.5 bg-parchment hover:bg-gold-pale transition-colors"
       aria-label="Change language"
     >
@@ -70,7 +72,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo — replace the placeholder div with a real <img> when logo is ready */}
 
-          <Link to="/" className="flex items-center gap-4 px-2">
+          <Link
+            to={localizedPath(localeFromPath(pathname))}
+            className="flex items-center gap-4 px-2"
+          >
             <div className="w-10 h-10 rounded-xl bg-gold flex items-center justify-center font-display font-bold text-lg text-ink select-none">
               <img
                 src={yehidatIcon}
