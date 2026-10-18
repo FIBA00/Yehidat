@@ -11,7 +11,7 @@ export const CONTACT = {
   PHONE_DISPLAY: "+251 96 80 34 000",
   WHATSAPP_NUMBER: "251968034000",
   EMAIL: "hawig74@gmail.com",
-  LOCATION: "Dukem/Bishoftu, Addis Ababa, Ethiopia",
+  LOCATION: "Dukem/Bishoftu, Ethiopia · Serving Addis Ababa & surroundings",
 };
 
 export const SOCIAL = {
