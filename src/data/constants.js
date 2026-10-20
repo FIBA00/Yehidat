@@ -15,9 +15,9 @@ export const CONTACT = {
 };
 
 export const SOCIAL = {
-  INSTAGRAM: "#",
-  TIKTOK: "#",
-  TELEGRAM: "#",
+  INSTAGRAM: "instagram.com/yehidat",
+  TIKTOK: "tiktok.com/@yehidat",
+  TELEGRAM: "t.me/yehidat",
 };
 
 export const withBase = (path) => {

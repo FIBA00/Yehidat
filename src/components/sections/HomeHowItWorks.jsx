@@ -3,7 +3,7 @@ import Reveal from "../ui/Reveal";
 
 const STEPS = [1, 2, 3];
 
-export default function HowItWorks() {
+export default function HomeHowItWorks() {
   const { t } = useTranslation();
 
   return (

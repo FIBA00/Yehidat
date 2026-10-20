@@ -12,7 +12,7 @@ import ResponsiveImage from "../ui/Image";
 
 const ITEMS = GALLERY_PHOTOS;
 
-export default function Gallery() {
+export default function HomeGallery() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -95,6 +95,9 @@ export default function Gallery() {
               </div>
             </div>
           )}
+          <button className="btn-gold">
+            Watch More
+          </button>
         </Reveal>
       </div>
     </section>

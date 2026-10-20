@@ -13,6 +13,8 @@ import Reveal from "../ui/Reveal";
 // Until then, submitCallback() just resolves after a short delay
 // so the success state can be previewed end-to-end.
 // ─────────────────────────────────────────────────────────────
+// TODO: change this to email sending on button click for request use the constants email address and collect the inserted information into email and trigger email sending.
+
 const FORM_ACTION = "";
 
 async function submitCallback(payload) {
@@ -53,7 +55,7 @@ function ChannelCard({ icon, label, value, href, external }) {
   );
 }
 
-export default function Contact() {
+export default function HomeContact() {
   const { t } = useTranslation();
   const selectedOccasion = useAppStore((s) => s.selectedOccasion);
   const clearSelection = useAppStore((s) => s.clearSelection);

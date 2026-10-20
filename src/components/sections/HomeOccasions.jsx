@@ -1,11 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { OCCASIONS } from "../../data/constants.js";
-import { useAppStore } from "../../store/useAppStore";
-import Reveal from "../ui/Reveal";
+import { useAppStore } from "../../store/useAppStore.js";
+import Reveal from "../ui/Reveal.jsx";
 import ResponsiveImage from "../ui/Image.jsx";
 
-export default function Occasions() {
+export default function HomeOccasions() {
   const { t } = useTranslation();
   const setSelectedOccasion = useAppStore((s) => s.setSelectedOccasion);
 

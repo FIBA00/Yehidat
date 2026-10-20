@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "motion/react";
 
 // ! internal imports
-import { TRUST_FACES } from "../../data/constants";
-import { HERO_PHOTOS } from "../../data/gallery";
-import { useAppStore } from "../../store/useAppStore";
+import { TRUST_FACES } from "../../data/constants.js";
+import { HERO_PHOTOS } from "../../data/gallery.js";
+import { useAppStore } from "../../store/useAppStore.js";
 import ResponsiveImage from "../ui/Image.jsx";
 
 const ROTATION_INTERVAL = 3000;
@@ -17,7 +17,7 @@ const HERO_SLIDES = HERO_PHOTOS.map((photo) => ({
   src: { avif: photo.avif, webp: photo.webp },
 }));
 
-export default function Hero() {
+export default function HomeHero() {
   const { t } = useTranslation();
   const clearSelection = useAppStore((s) => s.clearSelection);
   const [activeIndex, setActiveIndex] = useState(0);

@@ -37,7 +37,7 @@ function LanguageSwitcher() {
   );
 }
 
-export default function Navbar() {
+export default function HomeNavbar() {
   const { t } = useTranslation();
   const baseUrl = import.meta.env.BASE_URL;
   const [scrolled, setScrolled] = useState(false);

@@ -76,7 +76,7 @@ function PackageCard({ pkg, delay }) {
   );
 }
 
-export default function Packages() {
+export default function HomePackages() {
   const { t } = useTranslation();
 
   return (
