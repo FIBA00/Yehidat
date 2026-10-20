@@ -22,18 +22,20 @@ export default function HomeOccasions() {
           <h2 className="section-heading">{t("occasions.title")}</h2>
         </Reveal>
 
+  
         <Reveal
           delay={0.1}
-          className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3"
+          className="mx-auto flex w-full max-w-full flex-wrap items-center justify-center gap-2 sm:gap-3"
         >
           {OCCASIONS.map(({ id, emoji, src, alt }) => (
             <button
               key={id}
               type="button"
               onClick={() => handlePick(id)}
-              className="group bg-parchment border border-gold-edge/25 rounded-xl p-2 text-center
+              className="group w-[calc(50%-0.5rem)] bg-parchment border border-gold-edge/25 rounded-xl p-2 text-center
                         transition-all duration-200 hover:-translate-y-1 hover:bg-gold-cream
-                        hover:text-ink hover:border-gold-edge hover:shadow-gold"
+                        hover:text-ink hover:border-gold-edge hover:shadow-gold
+                        sm:w-[calc(25%-0.75rem)] lg:w-[calc(12.5%-0.5rem)]"
             >
               <div className="relative overflow-hidden rounded-lg mb-3 aspect-[3/4] bg-gold-pale">
                {src ? (

@@ -18,7 +18,7 @@ function PackageCard({ pkg, delay }) {
   return (
     <Reveal
       delay={delay}
-      className={`relative rounded-2xl p-6 h-100 sm:h-160 sm:w-100 sm:w-auto transition-transform duration-200 hover:-translate-y-1 ${
+      className={`relative rounded-2xl p-6  sm:h-160 sm:w-auto transition-transform duration-200 hover:-translate-y-1 ${
         pkg.featured
           ? "bg-ink text-parchment border border-gold-edge/55"
           : "bg-parchment ribbon-border"
