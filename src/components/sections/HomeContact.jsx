@@ -13,6 +13,7 @@ import {
 import { CONTACT, OCCASIONS } from "../../data/constants";
 import { useAppStore } from "../../store/useAppStore";
 import Reveal from "../ui/Reveal";
+import SectionBackground from "../ui/SectionBackground";
 
 async function submitCallback(payload) {
   // Wait with visual feedback so user sees the transition to their email app
@@ -123,8 +124,9 @@ export default function HomeContact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gold-cream">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="relative isolate py-20 bg-gold-cream">
+      <SectionBackground name="contact" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <Reveal>
             <p className="eyebrow">{t("contact.eyebrow")}</p>

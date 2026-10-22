@@ -13,6 +13,7 @@ import { OCCASIONS } from "../../data/constants.js";
 import { useAppStore } from "../../store/useAppStore.js";
 import Reveal from "../ui/Reveal.jsx";
 import ResponsiveImage from "../ui/Image.jsx";
+import SectionBackground from "../ui/SectionBackground.jsx";
 
 const OCCASION_ICONS = {
   birthday: Cake,
@@ -34,8 +35,9 @@ export default function HomeOccasions() {
   };
 
   return (
-    <section id="occasions" className="py-20 bg-gold-cream">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="occasions" className="relative isolate py-20 bg-gold-cream">
+      <SectionBackground name="occasions" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal className="text-center mb-12">
           <p className="eyebrow">{t("occasions.eyebrow")}</p>
           <h2 className="section-heading">{t("occasions.title")}</h2>

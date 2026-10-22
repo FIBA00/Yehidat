@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "name": "contact",
+      "webp": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/contact-640w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/contact-1086w.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/contact-640w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/contact-1086w.avif"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "webp": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/footer-640w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/footer-1086w.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/footer-640w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/footer-1086w.avif"
+        }
+      ]
+    },
+    {
+      "name": "gallery",
+      "webp": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/gallery-640w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/gallery-1086w.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/gallery-640w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/gallery-1086w.avif"
+        }
+      ]
+    },
+    {
+      "name": "hero",
+      "webp": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/hero-640w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/hero-1086w.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/hero-640w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/hero-1086w.avif"
+        }
+      ]
+    },
+    {
+      "name": "occasions",
+      "webp": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/occasions-640w.webp"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/occasions-1086w.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 640,
+          "src": "images/backgrounds/blur/occasions-640w.avif"
+        },
+        {
+          "w": 1086,
+          "src": "images/backgrounds/blur/occasions-1086w.avif"
+        }
+      ]
+    }
+  ]
+}

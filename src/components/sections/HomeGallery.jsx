@@ -6,6 +6,7 @@ import { localeFromPath, localizedPath } from "../../i18n/routes";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
 import Reveal from "../ui/Reveal";
 import ResponsiveImage from "../ui/Image";
+import SectionBackground from "../ui/SectionBackground";
 
 const FEATURED_ITEMS = GALLERY_PHOTOS.slice(0, 6);
 
@@ -16,8 +17,9 @@ export default function HomeGallery() {
   const galleryPath = localizedPath(locale, "/gallery");
 
   return (
-    <section id="gallery" className="py-20 bg-gold-cream/40">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="gallery" className="relative isolate py-20 bg-gold-cream/40">
+      <SectionBackground name="gallery" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal className="text-center mb-12">
           <p className="eyebrow">{t("gallery.eyebrow")}</p>
           <h2 className="section-heading mb-3">{t("gallery.title")}</h2>

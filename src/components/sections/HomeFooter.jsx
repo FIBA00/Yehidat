@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { localeFromPath, localizedPath } from "../../i18n/routes";
 import { CONTACT, SOCIAL } from "../../data/constants";
+import SectionBackground from "../ui/SectionBackground";
 
 function InstagramIcon({ className = "w-4 h-4" }) {
   return (
@@ -73,8 +74,9 @@ export default function HomeFooter() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-ink-muted text-shadow-gold-deep">
-      <div className="max-w-6xl mx-auto px-6 pt-12 pb-8">
+    <footer className="relative isolate overflow-hidden bg-ink-muted text-shadow-gold-deep">
+      <SectionBackground name="footer" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           <div>
             <p className="font-display font-bold text-xl text-gold mb-3">
