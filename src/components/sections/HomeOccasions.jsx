@@ -25,8 +25,6 @@ const OCCASION_ICONS = {
   justBecause: Sparkles,
 };
 
-import SectionBackground from "../ui/SectionBackground";
-
 export default function HomeOccasions() {
   const { t } = useTranslation();
   const setSelectedOccasion = useAppStore((s) => s.setSelectedOccasion);

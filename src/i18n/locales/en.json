@@ -50,6 +50,7 @@
     "getStarted": "Get started",
     "depositNote": "ETB {{amount}} deposit to confirm",
     "mostPopular": "Most Popular",
+    "discountOff": "{{percent}}% OFF",
     "basic": {
       "name": "Basic",
       "description": "A warm, heartfelt surprise for the people who matter most.",

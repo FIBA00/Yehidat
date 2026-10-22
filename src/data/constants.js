@@ -27,10 +27,11 @@ export const withBase = (path) => {
   return `${cleanBase}${cleanPath}`;
 };
 
+// Packages: set `discount` (% off) and optional `originalPrice` to show the animated discount badge, or 0 to disable.
 export const PACKAGES = [
-  { id: "basic", price: 3999, deposit: 2000, featured: false },
-  { id: "standard", price: 5999, deposit: 2500, featured: true },
-  { id: "premium", price: 9999, deposit: 4500, featured: false },
+  { id: "basic", price: 3999, originalPrice: 4500, discount: 11, deposit: 2000, featured: false },
+  { id: "standard", price: 5999, originalPrice: 7000, discount: 15, deposit: 2500, featured: true },
+  { id: "premium", price: 9999, originalPrice: 12000, discount: 17, deposit: 4500, featured: false },
 ];
 
 // TODO: convert the images to webp and avif from png later.

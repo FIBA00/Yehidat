@@ -10,8 +10,6 @@ import SectionBackground from "../ui/SectionBackground";
 
 const FEATURED_ITEMS = GALLERY_PHOTOS.slice(0, 6);
 
-import SectionBackground from "../ui/SectionBackground";
-
 export default function HomeGallery() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
@@ -19,7 +17,7 @@ export default function HomeGallery() {
   const galleryPath = localizedPath(locale, "/gallery");
 
   return (
-    <section id="gallery" className="relative isolate py-20 bg-gold-cream/30">
+    <section id="gallery" className="relative isolate py-20 overflow-hidden">
       <SectionBackground name="gallery" overlay="light" />
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal className="text-center mb-10">

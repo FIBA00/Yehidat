@@ -50,6 +50,7 @@
     "getStarted": "ይጀምሩ",
     "depositNote": "ለማረጋገጫ ETB {{amount}} ቅድመ ክፍያ",
     "mostPopular": "በጣም ተመራጭ",
+    "discountOff": "{{percent}}% ቅናሽ",
     "basic": {
       "name": "መሰረታዊ (Basic)",
       "description": "በጣም ለሚያስቡላቸው ሰዎች የሚሆን ሞቅ ያለ እና ልብ የሚነካ ሰርፕራይዝ።",
