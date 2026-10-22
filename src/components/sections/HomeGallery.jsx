@@ -17,7 +17,7 @@ export default function HomeGallery() {
   const galleryPath = localizedPath(locale, "/gallery");
 
   return (
-    <section id="gallery" className="relative isolate py-20 bg-gold-cream/40">
+    <section id="gallery" className="relative isolate py-20 overflow-hidden">
       <SectionBackground name="gallery" overlay="light" />
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal className="text-center mb-12">
@@ -40,9 +40,9 @@ export default function HomeGallery() {
               <Reveal
                 key={item.id}
                 delay={index * 0.08}
-                className="group relative aspect-4/5 h-40 w-full  overflow-hidden rounded-2xl border border-gold-edge/30 bg-parchment shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-gold"
+                className="group relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-edge/30 bg-parchment shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-gold"
               >
-                <div className="h-full w-full overflow-hidden">
+                <div className="absolute inset-0">
                   <ResponsiveImage
                     path={{ avif: item.avif, webp: item.webp }}
                     alt={item.alt}
