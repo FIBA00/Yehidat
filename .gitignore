@@ -36,3 +36,8 @@ src/assets/gallery/
 # About page team photo: raw file stays out of git, converted output is committed.
 src/assets/about/*
 !src/assets/about/*.txt
+
+# Section background photos: raw files stay out of git; converted output is committed.
+src/assets/backgrounds/*
+
+__pycache__/

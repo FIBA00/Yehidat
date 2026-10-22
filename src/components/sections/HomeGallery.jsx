@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 
 const ITEMS = GALLERY_PHOTOS;
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeGallery() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
@@ -36,8 +38,9 @@ export default function HomeGallery() {
   }, [prefersReducedMotion, count]);
 
   return (
-    <section id="gallery" className="py-20 bg-gold-cream/30">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="gallery" className="relative isolate py-20 bg-gold-cream/30">
+      <SectionBackground name="gallery" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal className="text-center mb-10">
           <p className="eyebrow">{t("gallery.eyebrow")}</p>
           <h2 className="section-heading">{t("gallery.title")}</h2>

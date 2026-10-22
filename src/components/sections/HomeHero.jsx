@@ -18,6 +18,8 @@ const HERO_SLIDES = HERO_PHOTOS.map((photo) => ({
   src: { avif: photo.avif, webp: photo.webp },
 }));
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeHero() {
   const { t } = useTranslation();
   const clearSelection = useAppStore((s) => s.clearSelection);
@@ -62,8 +64,9 @@ export default function HomeHero() {
   const activeSlide = HERO_SLIDES[activeIndex];
 
   return (
-    <section className="pt-32 pb-20 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="relative isolate pt-32 pb-20 overflow-hidden">
+      <SectionBackground name="hero" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

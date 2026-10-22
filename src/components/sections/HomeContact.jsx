@@ -61,6 +61,8 @@ function ChannelCard({ icon, label, value, href, external }) {
   );
 }
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeContact() {
   const { t } = useTranslation();
   const selectedOccasion = useAppStore((s) => s.selectedOccasion);
@@ -123,8 +125,9 @@ export default function HomeContact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gold-cream">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="relative isolate py-20 bg-gold-cream">
+      <SectionBackground name="contact" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <Reveal>
             <p className="eyebrow">{t("contact.eyebrow")}</p>

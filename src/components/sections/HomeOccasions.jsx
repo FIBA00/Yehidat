@@ -24,6 +24,8 @@ const OCCASION_ICONS = {
   justBecause: Sparkles,
 };
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeOccasions() {
   const { t } = useTranslation();
   const setSelectedOccasion = useAppStore((s) => s.setSelectedOccasion);
@@ -34,8 +36,9 @@ export default function HomeOccasions() {
   };
 
   return (
-    <section id="occasions" className="py-20 bg-gold-cream">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="occasions" className="relative isolate py-20 bg-gold-cream">
+      <SectionBackground name="occasions" overlay="light" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal className="text-center mb-12">
           <p className="eyebrow">{t("occasions.eyebrow")}</p>
           <h2 className="section-heading">{t("occasions.title")}</h2>
