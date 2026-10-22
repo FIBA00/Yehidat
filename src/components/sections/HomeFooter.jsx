@@ -64,6 +64,7 @@ const QUICK_LINK_KEYS = [
   { key: "packages", href: "#packages" },
   { key: "gallery", href: "#gallery" },
   { key: "about", href: "/about-us" },
+  { key: "team", href: "/team" },
 ];
 
 export default function HomeFooter() {

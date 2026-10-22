@@ -4,7 +4,9 @@
     "how": "Akkamitti akka hojjatu",
     "packages": "Kuufama",
     "gallery": "Suurale",
-    "cta": "Surprise karoorsi"
+    "cta": "Surprise karoorsi",
+    "about": "Waa'ee Keenya",
+    "team": "Garee Keenya"
   },
   "hero": {
     "tag": "Addis Ababa's Surprise Specialists",
@@ -84,7 +86,19 @@
   },
   "gallery": {
     "eyebrow": "Real moments",
-    "title": "Surprises we've brought to life"
+    "title": "Surprises we've brought to life",
+    "subtitle": "Qophiiwwan keenya filatamoo fi gammachuu dhugaa daawwadhaa.",
+    "viewAll": "Suuraalee Hunda Ilaalaa",
+    "breadcrumbHome": "Ka'umsa",
+    "breadcrumbGallery": "Gaalerii",
+    "pageTitle": "Yeroo Gammachuu fi Ayyaaneffannaa",
+    "pageSubtitle": "Suuralee qophii ajaa'ibsiisaa fi yaadannoo bareedaa nuti qopheessine.",
+    "filterAll": "Hunda",
+    "filterSurprises": "Qophiiwwan",
+    "filterCakes": "Keekii & Miidhagina",
+    "filterOutdoor": "Bakkee",
+    "ctaTitle": "Qophii addaa qopheessuuf qophiidhaa?",
+    "ctaButton": "Nu Wajjiin Qopheessaa"
   },
   "contact": {
     "eyebrow": "Get in touch",
@@ -93,7 +107,7 @@
     "whatsappLabel": "WhatsApp us",
     "callLabel": "Call us directly",
     "hoursLabel": "We're available",
-    "hoursValue": "Mon–Sat, 9am–7pm",
+    "hoursValue": "Mon–Sun, 9am–5pm",
     "formTitle": "Request a callback",
     "formSubtitle": "Leave your details and we'll call you back within a few hours.",
     "nameLabel": "Your name",
@@ -118,5 +132,27 @@
     "quickLinks": "Quick links",
     "contact": "Contact",
     "rights": "All rights reserved."
+  },
+  "team": {
+    "eyebrow": "Garee Keenya",
+    "title": "Garee Qophiiwwan Gammachuu Qopheessan Baradhaa",
+    "subtitle": "Dukem/Bishooftuu fi naannoo isheetti yeroo gammachuu addaa uumuuf kanneen qophaa'an.",
+    "breadcrumbHome": "Ka'umsa",
+    "breadcrumbTeam": "Garee Keenya",
+    "storyTitle": "Gammachuu Dhugaa Uumna",
+    "storyText": "Yehidat keessatti, jaalala keessan gara yaadannoo hin irraanfatamneetti geeddarra. Abaaboo, keekii fi miidhagina hundaa of eeggannoodhaan qopheessina.",
+    "photo1": "Qindeessaa Qophii",
+    "photo2": "Miidhagina fi Abaaboo",
+    "photo3": "Garee Qophii Yehidat",
+    "photo4": "Ergaa fi Gammachuu Dhiyeessuu",
+    "valuesTitle": "Maaliif Nu Filatu?",
+    "val1Title": "100% Iccitii Kan Eegame",
+    "val1Desc": "Hanga yeroon qophii gahuutti iccitii guutuudhaan qopheessina.",
+    "val2Title": "Qulqullina Olaanaa",
+    "val2Desc": "Wanti hundi qulqullina olaanaadhaan filatama.",
+    "val3Title": "Sa'aatii Eeguu",
+    "val3Desc": "Sa'aatii sirriitti dhiyaachuudhaan gammachuu uumna.",
+    "ctaTitle": "Namoota jaallattaniif qophii addaa qopheessuuf qophiidhaa?",
+    "ctaButton": "Nu Wajjiin Qopheessaa"
   }
 }

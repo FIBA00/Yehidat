@@ -1,103 +1,73 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "motion/react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { GALLERY_PHOTOS } from "../../data/gallery";
+import { localeFromPath, localizedPath } from "../../i18n/routes";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
 import Reveal from "../ui/Reveal";
 import ResponsiveImage from "../ui/Image";
-import { Link } from "react-router-dom";
 
-// Photos are not listed in code. They come from src/data/gallery.json, which
-// `npm run gallery` builds from the photos in src/assets/gallery.
-// To add photos: drop them in that folder, run `npm run gallery`, commit.
-
-const ITEMS = GALLERY_PHOTOS;
+const FEATURED_ITEMS = GALLERY_PHOTOS.slice(0, 6);
 
 export default function HomeGallery() {
   const { t } = useTranslation();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const count = ITEMS.length;
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setPrefersReducedMotion(mediaQuery.matches);
-    update();
-    mediaQuery.addEventListener("change", update);
-    return () => mediaQuery.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    if (prefersReducedMotion || count < 2) return undefined;
-    const id = window.setInterval(() => {
-      setActiveIndex((index) => (index + 1) % count);
-    }, 2600);
-    return () => window.clearInterval(id);
-  }, [prefersReducedMotion, count]);
+  const { pathname } = useLocation();
+  const locale = localeFromPath(pathname);
+  const galleryPath = localizedPath(locale, "/gallery");
 
   return (
-    <section id="gallery" className="py-20 bg-gold-cream/30">
+    <section id="gallery" className="py-20 bg-gold-cream/40">
       <div className="max-w-6xl mx-auto px-6">
-        <Reveal className="text-center mb-10">
+        <Reveal className="text-center mb-12">
           <p className="eyebrow">{t("gallery.eyebrow")}</p>
-          <h2 className="section-heading">{t("gallery.title")}</h2>
+          <h2 className="section-heading mb-3">{t("gallery.title")}</h2>
+          <p className="text-base text-ink-soft max-w-xl mx-auto">
+            {t("gallery.subtitle")}
+          </p>
         </Reveal>
 
-        <Reveal delay={0.1} className="relative">
-          {count === 0 ? (
-            <ImagePlaceholder
-              src={null}
-              hint={"No gallery photos yet.\nAdd them to src/assets/gallery, then run npm run gallery."}
-              className="mx-auto h-65 max-w-md"
-            />
-          ) : (
-            <div className="overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex min-h-75 w-max items-center justify-start gap-0 px-4 py-6 perspective:[1600px]">
-                {ITEMS.map((item, i) => {
-                  const relative = (i - activeIndex + count) % count;
-                  const wrapped = relative > count / 2 ? relative - count : relative;
-                  const absDistance = Math.abs(wrapped);
-                  const isVisible = absDistance <= 2;
+        {FEATURED_ITEMS.length === 0 ? (
+          <ImagePlaceholder
+            src={null}
+            hint="No gallery photos yet."
+            className="mx-auto h-64 max-w-md"
+          />
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12">
+            {FEATURED_ITEMS.map((item, index) => (
+              <Reveal
+                key={item.id}
+                delay={index * 0.08}
+                className="group relative aspect-4/5 h-40 w-full  overflow-hidden rounded-2xl border border-gold-edge/30 bg-parchment shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-gold"
+              >
+                <div className="h-full w-full overflow-hidden">
+                  <ResponsiveImage
+                    path={{ avif: item.avif, webp: item.webp }}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 50vw"
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end p-4">
+                  <p className="text-xs font-semibold text-parchment tracking-wide">
+                    {item.alt}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        )}
 
-                  return (
-                    <motion.div
-                      key={item.id}
-                      animate={{
-                        x: wrapped * 62,
-                        y: absDistance * 10,
-                        rotateY: wrapped * -16,
-                        scale: 1 - absDistance * 0.08,
-                        opacity: isVisible ? 1 : 0.55,
-                      }}
-                      transition={{ duration: 0.7, ease: "easeInOut" }}
-                      className="group relative h-65 w-[78vw] max-w-50 shrink-0 snap-center first:ml-5"
-                      style={{
-                        marginLeft: i === 0 ? 0 : "-1rem",
-                        zIndex: count - absDistance,
-                      }}
-                    >
-                      <div
-                        className="absolute inset-0 overflow-hidden rounded-[1.75rem] border border-gold-edge/60 bg-parchment shadow-[0_20px_45px_rgba(0,0,0,0.24)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_25px_55px_rgba(0,0,0,0.40)]"
-                        style={{ transformStyle: "preserve-3d" }}
-                      >
-                        <ResponsiveImage
-                          path={{ avif: item.avif, webp: item.webp }}
-                          alt={item.alt}
-                          width={item.width}
-                          height={item.height}
-                          sizes="(min-width: 640px) 200px, 78vw"
-                          loading="lazy"
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-          <Link to="/gallery" className="btn-gold">
-            Watch More
+        <Reveal delay={0.2} className="text-center">
+          <Link
+            to={galleryPath}
+            className="btn-gold inline-flex items-center gap-2"
+          >
+            <span>{t("gallery.viewAll")}</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </Reveal>
       </div>

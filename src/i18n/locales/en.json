@@ -5,7 +5,8 @@
     "packages": "Packages",
     "gallery": "Gallery",
     "cta": "Plan a Surprise",
-    "about": "About us"
+    "about": "About us",
+    "team": "Meet the Team"
   },
   "hero": {
     "tag": "Surprise Planning Team",
@@ -92,7 +93,19 @@
   },
   "gallery": {
     "eyebrow": "Real moments",
-    "title": "Surprises we've brought to life"
+    "title": "Surprises we've brought to life",
+    "subtitle": "Explore our favorite setups, genuine reactions, and sweet moments from across the city.",
+    "viewAll": "View Full Gallery",
+    "breadcrumbHome": "Home",
+    "breadcrumbGallery": "Gallery",
+    "pageTitle": "Moments of Joy & Celebration",
+    "pageSubtitle": "A showcase of custom surprises, luxury setups, and heartfelt memories we've helped create.",
+    "filterAll": "All Moments",
+    "filterSurprises": "Surprises",
+    "filterCakes": "Cakes & Details",
+    "filterOutdoor": "Outdoor Setups",
+    "ctaTitle": "Ready to plan your special surprise?",
+    "ctaButton": "Plan a Surprise With Us"
   },
   "contact": {
     "eyebrow": "Get in touch",
@@ -101,7 +114,7 @@
     "whatsappLabel": "WhatsApp us",
     "callLabel": "Call us directly",
     "hoursLabel": "We're available",
-    "hoursValue": "Mon–Sat, 9am–7pm",
+    "hoursValue": "Mon–Sun, 9am–5pm",
     "formTitle": "Request a callback",
     "formSubtitle": "Leave your details and we'll call you back within a few hours.",
     "nameLabel": "Your name",
@@ -137,7 +150,33 @@
     "gallery": {
       "title": "Yehidat Gallery — Memorable Surprises in Dukem/Bishoftu",
       "description": "Explore photos and moments from surprise celebrations organized by Yehidat in Dukem/Bishoftu and surrounding areas."
+    },
+    "team": {
+      "title": "Meet the Yehidat Team — Surprise Planners in Dukem/Bishoftu",
+      "description": "Get to know the passionate team behind Yehidat surprise celebrations in Dukem/Bishoftu and surrounding areas."
     }
+  },
+  "team": {
+    "eyebrow": "Our Team",
+    "title": "Meet the Team Behind Every Surprise",
+    "subtitle": "Passionate, discreet, and dedicated planners creating moments that last a lifetime across Dukem/Bishoftu and beyond.",
+    "breadcrumbHome": "Home",
+    "breadcrumbTeam": "Meet the Team",
+    "storyTitle": "Crafting Joy, One Moment at a Time",
+    "storyText": "At Yehidat, our team is united by one mission: turning heartfelt love into unforgettable experiences. We take care of every single detail — from sourcing the freshest flowers and coordinating bespoke cakes to staging picture-perfect setups — so you get all the credit without any of the stress.",
+    "photo1": "Event Coordination & Setup",
+    "photo2": "Creative Decor & Floral Styling",
+    "photo3": "Celebration Planning Team",
+    "photo4": "Special Moments & Delivery",
+    "valuesTitle": "Why Families & Friends Trust Us",
+    "val1Title": "100% Secret & Discreet",
+    "val1Desc": "We coordinate behind the scenes so the surprise stays completely unexpected until the very second they walk in.",
+    "val2Title": "Curated Quality",
+    "val2Desc": "Every bouquet, pastry, balloon arch, and gift is chosen with utmost care to ensure luxury presentation.",
+    "val3Title": "Punctual Delivery",
+    "val3Desc": "Timing is everything in surprises. We guarantee on-the-dot arrival and seamless execution.",
+    "ctaTitle": "Ready to surprise someone special?",
+    "ctaButton": "Plan a Surprise With Us"
   },
   "about": {
     "eyebrow": "About Yehidat",
