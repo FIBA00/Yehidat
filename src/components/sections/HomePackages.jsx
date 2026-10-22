@@ -14,6 +14,18 @@ function PackageCard({ pkg, delay }) {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const discountPercent =
+    pkg.discount ??
+    (pkg.originalPrice
+      ? Math.round(((pkg.originalPrice - pkg.price) / pkg.originalPrice) * 100)
+      : 0);
+
+  const originalPrice =
+    pkg.originalPrice ??
+    (discountPercent > 0
+      ? Math.round(pkg.price / (1 - discountPercent / 100))
+      : null);
+
   const items = t(`packages.${pkg.id}.items`, { returnObjects: true });
 
   return (
@@ -26,18 +38,40 @@ function PackageCard({ pkg, delay }) {
       }`}
     >
       {pkg.featured && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-ink text-[11px] font-bold tracking-wider uppercase px-4 py-1 rounded-full whitespace-nowrap">
+        <div
+          className={`absolute -top-3 ${
+            discountPercent > 0 ? "left-4" : "left-1/2 -translate-x-1/2"
+          } bg-gold text-ink text-[11px] font-bold tracking-wider uppercase px-3.5 py-1 rounded-full whitespace-nowrap`}
+        >
           {t("packages.mostPopular")}
         </div>
       )}
+
+      {discountPercent > 0 && (
+        <div className="absolute -top-3 right-4 z-10 inline-flex items-center gap-1.5 bg-red-600 text-white text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full shadow-md shadow-red-600/30">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+          </span>
+          <span>{t("packages.discountOff", { percent: discountPercent })}</span>
+        </div>
+      )}
+
     <div className="flex-col place-items-center">
       <p className={`font-display font-bold text-lg mb-1 ${pkg.featured ? "text-gold" : "text-ink"}`}> {t(`packages.${pkg.id}.name`)} </p>
-      <div className="flex items-baseline gap-1 mb-2">
+      <div className="flex flex-wrap items-baseline justify-center gap-1.5 mb-2">
         <span
           className={`text-sm font-semibold ${pkg.featured ? "text-gold" : "text-gold-deep"}`} > ETB </span>
         <span
           className={`font-display font-bold leading-none text-4xl ${pkg.featured ? "text-gold" : "text-ink"}`}
         >{pkg.price.toLocaleString()}</span>
+        {originalPrice && (
+          <span
+            className={`text-xs sm:text-sm line-through font-medium ml-1 ${pkg.featured ? "text-parchment/50" : "text-ink-muted/80"}`}
+          >
+            ETB {originalPrice.toLocaleString()}
+          </span>
+        )}
       </div>
 
       <p

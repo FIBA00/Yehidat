@@ -13,6 +13,7 @@ import { OCCASIONS } from "../../data/constants.js";
 import { useAppStore } from "../../store/useAppStore.js";
 import Reveal from "../ui/Reveal.jsx";
 import ResponsiveImage from "../ui/Image.jsx";
+import SectionBackground from "../ui/SectionBackground.jsx";
 
 const OCCASION_ICONS = {
   birthday: Cake,
@@ -23,8 +24,6 @@ const OCCASION_ICONS = {
   promotion: Trophy,
   justBecause: Sparkles,
 };
-
-import SectionBackground from "../ui/SectionBackground";
 
 export default function HomeOccasions() {
   const { t } = useTranslation();

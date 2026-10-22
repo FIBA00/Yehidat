@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { localeFromPath, localizedPath } from "../../i18n/routes";
 import { CONTACT, SOCIAL } from "../../data/constants";
+import SectionBackground from "../ui/SectionBackground";
 
 function InstagramIcon({ className = "w-4 h-4" }) {
   return (
@@ -64,9 +65,8 @@ const QUICK_LINK_KEYS = [
   { key: "packages", href: "#packages" },
   { key: "gallery", href: "#gallery" },
   { key: "about", href: "/about-us" },
+  { key: "team", href: "/team" },
 ];
-
-import SectionBackground from "../ui/SectionBackground";
 
 export default function HomeFooter() {
   const { pathname } = useLocation();

@@ -10,8 +10,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview": "vite preview",
-    "gallery": "python3 scripts/convert_images.py --gallery --manifest src/data/gallery.json --prune",
-    "about-image": "python3 scripts/convert_images.py --input src/assets/about --output public/images/about --manifest src/data/about.json --prune",
+    "gallery": "python3 scripts/convert_images.py --gallery --manifest src/data/gallery.json",
+    "about-image": "python3 scripts/convert_images.py --input src/assets/about --output public/images/about --manifest src/data/about.json",
     "backgrounds": "python3 scripts/convert_images.py --input src/assets/backgrounds --output public/images/backgrounds && python3 scripts/make-backgrounds.py"
   },
   "dependencies": {

@@ -9,6 +9,7 @@ import { TRUST_FACES } from "../../data/constants.js";
 import { HERO_PHOTOS } from "../../data/gallery.js";
 import { useAppStore } from "../../store/useAppStore.js";
 import ResponsiveImage from "../ui/Image.jsx";
+import SectionBackground from "../ui/SectionBackground.jsx";
 
 const ROTATION_INTERVAL = 3000;
 
@@ -17,8 +18,6 @@ const HERO_SLIDES = HERO_PHOTOS.map((photo) => ({
   alt: photo.alt,
   src: { avif: photo.avif, webp: photo.webp },
 }));
-
-import SectionBackground from "../ui/SectionBackground";
 
 export default function HomeHero() {
   const { t } = useTranslation();

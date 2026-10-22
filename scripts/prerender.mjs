@@ -17,6 +17,9 @@ const ROUTES = [
   "/gallery/",
   "/am/gallery/",
   "/om/gallery/",
+  "/team/",
+  "/am/team/",
+  "/om/team/",
 ];
 
 // Tags that headTags() owns. They are removed from the template first, so

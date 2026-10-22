@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "id": "IMG_6508",
+      "alt": "IMG 6508",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/team/webp/IMG_6508-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/team/webp/IMG_6508-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/webp/IMG_6508.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/team/avif/IMG_6508-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/team/avif/IMG_6508-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/avif/IMG_6508.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "id": "IMG_6509",
+      "alt": "IMG 6509",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/team/webp/IMG_6509-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/team/webp/IMG_6509-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/webp/IMG_6509.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/team/avif/IMG_6509-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/team/avif/IMG_6509-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/avif/IMG_6509.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "id": "IMG_6512",
+      "alt": "IMG 6512",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/team/webp/IMG_6512-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/team/webp/IMG_6512-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/webp/IMG_6512.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/team/avif/IMG_6512-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/team/avif/IMG_6512-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/avif/IMG_6512.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "id": "IMG_6515",
+      "alt": "IMG 6515",
+      "webp": [
+        {
+          "w": 480,
+          "src": "images/team/webp/IMG_6515-480w.webp"
+        },
+        {
+          "w": 800,
+          "src": "images/team/webp/IMG_6515-800w.webp"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/webp/IMG_6515.webp"
+        }
+      ],
+      "avif": [
+        {
+          "w": 480,
+          "src": "images/team/avif/IMG_6515-480w.avif"
+        },
+        {
+          "w": 800,
+          "src": "images/team/avif/IMG_6515-800w.avif"
+        },
+        {
+          "w": 1200,
+          "src": "images/team/avif/IMG_6515.avif"
+        }
+      ],
+      "width": 1200,
+      "height": 900
+    }
+  ]
+}

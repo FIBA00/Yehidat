@@ -13,6 +13,7 @@ import {
 import { CONTACT, OCCASIONS } from "../../data/constants";
 import { useAppStore } from "../../store/useAppStore";
 import Reveal from "../ui/Reveal";
+import SectionBackground from "../ui/SectionBackground";
 
 async function submitCallback(payload) {
   // Wait with visual feedback so user sees the transition to their email app
@@ -60,8 +61,6 @@ function ChannelCard({ icon, label, value, href, external }) {
     </a>
   );
 }
-
-import SectionBackground from "../ui/SectionBackground";
 
 export default function HomeContact() {
   const { t } = useTranslation();

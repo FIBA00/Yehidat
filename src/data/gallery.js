@@ -9,9 +9,17 @@ export function toSrcSet(files) {
   return files.map((f) => `${withBase(f.src)} ${f.w}w`).join(", ");
 }
 
+export function getCategory(id = "") {
+  const lower = id.toLowerCase();
+  if (lower.includes("cake")) return "cakes";
+  if (lower.includes("outdoor")) return "outdoor";
+  return "surprises";
+}
+
 export const GALLERY_PHOTOS = galleryData.items.map((item) => ({
   id: item.id,
   alt: item.alt,
+  category: getCategory(item.id),
   width: item.width,
   height: item.height,
   avif: toSrcSet(item.avif),
