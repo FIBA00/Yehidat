@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
-import { GALLERY_PHOTOS } from "../../data/gallery";
-import ImagePlaceholder from "../ui/ImagePlaceholder";
-import Reveal from "../ui/Reveal";
-import ResponsiveImage from "../ui/Image";
+import { Link } from "react-router-dom";
+
+// ! internal imports 
+import { GALLERY_PHOTOS } from "../data/gallery.js";
+import ImagePlaceholder from "../components/ui/ImagePlaceholder.jsx";
+import ResponsiveImage from "../components/ui/Image.jsx";
 
 // Photos are not listed in code. They come from src/data/gallery.json, which
 // `npm run gallery` builds from the photos in src/assets/gallery.
@@ -37,21 +39,18 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-20 bg-gold-cream/30">
       <div className="max-w-6xl mx-auto px-6">
-        <Reveal className="text-center mb-10">
           <p className="eyebrow">{t("gallery.eyebrow")}</p>
           <h2 className="section-heading">{t("gallery.title")}</h2>
-        </Reveal>
 
-        <Reveal delay={0.1} className="relative">
           {count === 0 ? (
             <ImagePlaceholder
               src={null}
               hint={"No gallery photos yet.\nAdd them to src/assets/gallery, then run npm run gallery."}
-              className="mx-auto h-[260px] max-w-md"
+              className="mx-auto h-65 max-w-md"
             />
           ) : (
-            <div className="overflow-x-auto snap-x snap-mandatory pb-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex min-h-[300px] w-max items-center justify-start gap-0 px-4 py-6 [perspective:1600px]">
+            <div className="overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex min-h-75 w-max items-center justify-start gap-0 px-4 py-6 perspective:[1600px]">
                 {ITEMS.map((item, i) => {
                   const relative = (i - activeIndex + count) % count;
                   const wrapped = relative > count / 2 ? relative - count : relative;
@@ -69,7 +68,7 @@ export default function Gallery() {
                         opacity: isVisible ? 1 : 0.55,
                       }}
                       transition={{ duration: 0.7, ease: "easeInOut" }}
-                      className="group relative h-[260px] w-[78vw] max-w-[200px] shrink-0 snap-center first:ml-5"
+                      className="group relative h-65 w-[78vw] max-w-50 shrink-0 snap-center first:ml-5"
                       style={{
                         marginLeft: i === 0 ? 0 : "-1rem",
                         zIndex: count - absDistance,
@@ -95,7 +94,7 @@ export default function Gallery() {
               </div>
             </div>
           )}
-        </Reveal>
+        
       </div>
     </section>
   );

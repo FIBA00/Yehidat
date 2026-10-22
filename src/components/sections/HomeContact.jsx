@@ -2,31 +2,39 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "motion/react";
+import {
+  MessageCircle,
+  Phone,
+  Clock,
+  CheckCircle2,
+  Loader2,
+  Mail,
+} from "lucide-react";
 import { CONTACT, OCCASIONS } from "../../data/constants";
 import { useAppStore } from "../../store/useAppStore";
 import Reveal from "../ui/Reveal";
 
-// ── FORM BACKEND ──────────────────────────────────────────────
-// Set FORM_ACTION to a real endpoint when ready:
-//   Formspree:      'https://formspree.io/f/YOUR_FORM_ID'
-//   Express backend: '/api/callback-requests'
-// Until then, submitCallback() just resolves after a short delay
-// so the success state can be previewed end-to-end.
-// ─────────────────────────────────────────────────────────────
-const FORM_ACTION = "";
-
 async function submitCallback(payload) {
-  if (!FORM_ACTION) {
-    await new Promise((r) => setTimeout(r, 500));
-    return { ok: true };
+  // Wait with visual feedback so user sees the transition to their email app
+  await new Promise((resolve) => setTimeout(resolve, 1400));
+
+  const subject = encodeURIComponent(
+    `Surprise Request: ${payload.occasion || "Celebration"} - ${payload.name}`,
+  );
+  const body = encodeURIComponent(
+    `Hello Yehidat Team,\n\nI would like to request a surprise package.\n\n` +
+      `Name: ${payload.name}\n` +
+      `Phone: ${payload.phone}\n` +
+      `Occasion: ${payload.occasion || "Not specified"}\n` +
+      `Date: ${payload.date || "Not specified"}\n` +
+      `Message: ${payload.message || "None"}\n\n` +
+      `Sent via Yehidat website`,
+  );
+
+  if (typeof window !== "undefined") {
+    window.location.href = `mailto:${CONTACT.EMAIL}?subject=${subject}&body=${body}`;
   }
-  const res = await fetch(FORM_ACTION, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) throw new Error("Submission failed");
-  return res.json();
+  return { ok: true };
 }
 
 function ChannelCard({ icon, label, value, href, external }) {
@@ -53,7 +61,7 @@ function ChannelCard({ icon, label, value, href, external }) {
   );
 }
 
-export default function Contact() {
+export default function HomeContact() {
   const { t } = useTranslation();
   const selectedOccasion = useAppStore((s) => s.selectedOccasion);
   const clearSelection = useAppStore((s) => s.clearSelection);
@@ -93,21 +101,21 @@ export default function Contact() {
 
   const CHANNELS = [
     {
-      icon: "💬",
+      icon: <MessageCircle className="w-5 h-5 text-gold-deep" />,
       label: t("contact.whatsappLabel"),
       value: CONTACT.PHONE_DISPLAY,
       href: `https://wa.me/${CONTACT.WHATSAPP_NUMBER}`,
       external: true,
     },
     {
-      icon: "📞",
+      icon: <Phone className="w-5 h-5 text-gold-deep" />,
       label: t("contact.callLabel"),
       value: CONTACT.PHONE_DISPLAY,
       href: `tel:${CONTACT.PHONE_RAW}`,
       external: false,
     },
     {
-      icon: "🕐",
+      icon: <Clock className="w-5 h-5 text-gold-deep" />,
       label: t("contact.hoursLabel"),
       value: t("contact.hoursValue"),
       href: null,
@@ -141,19 +149,35 @@ export default function Contact() {
                   exit={{ opacity: 0 }}
                   className="text-center py-8"
                 >
-                  <div className="text-5xl mb-4">🎉</div>
+                  <div className="flex justify-center mb-4">
+                    <CheckCircle2 className="w-12 h-12 text-gold-deep" />
+                  </div>
                   <h3 className="font-display font-bold text-xl mb-2">
                     {t("contact.successTitle")}
                   </h3>
-                  <p className="text-sm text-ink-muted">
+                  <p className="text-sm text-ink-muted mb-2">
                     {t("contact.successBody", { phone: form.phone })}
                   </p>
-                  <button
-                    onClick={handleReset}
-                    className="btn-outline mt-6 text-sm"
-                  >
-                    {t("contact.submitAnother")}
-                  </button>
+                  <p className="text-xs text-ink-soft max-w-sm mx-auto mb-6 leading-relaxed">
+                    {t("contact.emailOpenedNote")}
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-3">
+                    <a
+                      href={`https://wa.me/${CONTACT.WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi Yehidat! I submitted a request for ${form.name} (${form.occasion || "Celebration"}).`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-gold text-xs inline-flex items-center gap-1.5"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      <span>WhatsApp Yehidat</span>
+                    </a>
+                    <button
+                      onClick={handleReset}
+                      className="btn-outline text-xs"
+                    >
+                      {t("contact.submitAnother")}
+                    </button>
+                  </div>
                 </motion.div>
               ) : (
                 <motion.div
@@ -255,12 +279,30 @@ export default function Contact() {
                       </p>
                     )}
 
+                    {mutation.isPending && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="p-3 bg-gold-pale border border-gold-edge/40 rounded-lg flex items-center gap-2.5 text-xs text-ink font-medium"
+                      >
+                        <Mail className="w-4 h-4 text-gold-deep animate-bounce shrink-0" />
+                        <span>{t("contact.navigatingEmail")}</span>
+                      </motion.div>
+                    )}
+
                     <button
                       type="submit"
                       disabled={mutation.isPending}
-                      className="btn-gold w-full justify-center mt-1 disabled:opacity-60"
+                      className="btn-gold w-full justify-center mt-1 disabled:opacity-75 inline-flex items-center gap-2"
                     >
-                      {mutation.isPending ? "…" : t("contact.submit")}
+                      {mutation.isPending ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>{t("contact.navigatingEmail")}</span>
+                        </>
+                      ) : (
+                        t("contact.submit")
+                      )}
                     </button>
                     <p className="text-[11px] text-ink-muted text-center">
                       {t("contact.formNote")}

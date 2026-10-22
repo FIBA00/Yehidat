@@ -2,11 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "motion/react";
+import { ArrowRight, ChevronLeft, ChevronRight, Cake } from "lucide-react";
 
 // ! internal imports
-import { TRUST_FACES } from "../../data/constants";
-import { HERO_PHOTOS } from "../../data/gallery";
-import { useAppStore } from "../../store/useAppStore";
+import { TRUST_FACES } from "../../data/constants.js";
+import { HERO_PHOTOS } from "../../data/gallery.js";
+import { useAppStore } from "../../store/useAppStore.js";
 import ResponsiveImage from "../ui/Image.jsx";
 
 const ROTATION_INTERVAL = 3000;
@@ -17,7 +18,7 @@ const HERO_SLIDES = HERO_PHOTOS.map((photo) => ({
   src: { avif: photo.avif, webp: photo.webp },
 }));
 
-export default function Hero() {
+export default function HomeHero() {
   const { t } = useTranslation();
   const clearSelection = useAppStore((s) => s.clearSelection);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -91,9 +92,10 @@ export default function Hero() {
                   clearSelection();
                   scrollTo("contact");
                 }}
-                className="btn-gold"
+                className="btn-gold inline-flex items-center gap-1.5"
               >
-                {t("hero.ctaPrimary")} <span>→</span>
+                <span>{t("hero.ctaPrimary")}</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
               <button onClick={() => scrollTo("how")} className="btn-outline">
                 {t("hero.ctaSecondary")}
@@ -182,7 +184,7 @@ export default function Hero() {
                     aria-label="Show previous project"
                     className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-parchment/90 text-ink shadow-card flex items-center justify-center hover:bg-parchment focus-visible:outline-2 focus-visible:outline-gold"
                   >
-                    <span aria-hidden="true">←</span>
+                    <ChevronLeft className="w-5 h-5" aria-hidden="true" />
                   </button>
                   <button
                     type="button"
@@ -190,7 +192,7 @@ export default function Hero() {
                     aria-label="Show next project"
                     className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-parchment/90 text-ink shadow-card flex items-center justify-center hover:bg-parchment focus-visible:outline-2 focus-visible:outline-gold"
                   >
-                    <span aria-hidden="true">→</span>
+                    <ChevronRight className="w-5 h-5" aria-hidden="true" />
                   </button>
                   <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-2">
                     {HERO_SLIDES.map((slide, index) => (
@@ -215,8 +217,8 @@ export default function Hero() {
             </div>
 
             <div className="absolute -bottom-4 -left-4 sm:-left-5 bg-parchment border border-gold-edge/55 rounded-xl px-4 py-3 shadow-card flex items-center gap-3">
-              <div className="w-10 h-10 bg-gold-pale rounded-lg flex items-center justify-center text-xl">
-                🎂
+              <div className="w-10 h-10 bg-gold-pale rounded-lg flex items-center justify-center text-gold-deep">
+                <Cake className="w-5 h-5" />
               </div>
               <div>
                 <p className="text-[10px] text-ink-muted leading-none mb-0.5">

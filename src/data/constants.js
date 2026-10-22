@@ -10,14 +10,14 @@ export const CONTACT = {
   PHONE_RAW: "+251968034000",
   PHONE_DISPLAY: "+251 96 80 34 000",
   WHATSAPP_NUMBER: "251968034000",
-  EMAIL: "hawig74@gmail.com",
-  LOCATION: "Dukem/Bishoftu, Ethiopia · Serving Addis Ababa & surroundings",
+  EMAIL: "diboramarema@gmail.com",
+  LOCATION: "Dukem/Bishoftu, Ethiopia · Serving Dukem and Bishoftu areas",
 };
 
 export const SOCIAL = {
-  INSTAGRAM: "#",
-  TIKTOK: "#",
-  TELEGRAM: "#",
+  INSTAGRAM: "instagram.com/yehidat",
+  TIKTOK: "tiktok.com/@yehidat",
+  TELEGRAM: "t.me/yehidat",
 };
 
 export const withBase = (path) => {

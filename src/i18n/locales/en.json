@@ -8,9 +8,9 @@
     "about": "About us"
   },
   "hero": {
-    "tag": "Surprise Specialists · Addis Ababa & Surroundings",
-    "titleLine1": "Surprises that make them",
-    "titleEmphasis": "cry happy tears",
+    "tag": "Surprise Planning Team",
+    "titleLine1": "Yehidat",
+    "titleEmphasis": "Suprise Planning and Delivery ",
     "subtitle": "You tell us who to surprise and when. We handle every detail — flowers, cake, decor, venue — and deliver a moment they'll never forget.",
     "ctaPrimary": "Plan a Surprise",
     "ctaSecondary": "See how it works",
@@ -53,10 +53,12 @@
       "name": "Basic",
       "description": "A warm, heartfelt surprise for the people who matter most.",
       "items": [
-        "Occasion decoration setup",
-        "Custom celebration cake",
-        "Flower arrangement",
-        "Personalized message display"
+        "1 Kg Cake",
+        "Flowers",
+        "Post Card with your message",
+        "Fire works",
+        "Spray",
+        "Video Recording"
       ]
     },
     "standard": {
@@ -64,10 +66,13 @@
       "description": "Everything in Basic, elevated with more detail and a bigger wow.",
       "items": [
         "Everything in Basic",
-        "Premium decoration upgrade",
-        "Balloon installation",
-        "Photography (1 hour)",
-        "Gift wrapping & presentation"
+        "1 Kg Cake",
+        "Flowers",
+        "Post Card with your message",
+        "Shape or letter balloons",
+        "Fire works",
+        "Spray",
+        "Video Recording"
       ]
     },
     "premium": {
@@ -75,11 +80,13 @@
       "description": "A full luxury experience — the kind of surprise they talk about for years.",
       "items": [
         "Everything in Standard",
-        "Hotel or venue arrangement",
-        "Videography & editing",
-        "Live music or DJ",
-        "Full dinner arrangement",
-        "Dedicated Yehidat coordinator"
+        "1 Kg Cake",
+        "Flowers in a box",
+        "Post Card with your message",
+        "Shape or letter balloons",
+        "Fire works",
+        "Spray",
+        "Video Recording"
       ]
     }
   },
@@ -107,29 +114,35 @@
     "messageLabel": "Anything you'd like us to know?",
     "messagePlaceholder": "Tell us a little about who you're surprising…",
     "submit": "Send request →",
+    "navigatingEmail": "Opening your email app to send request...",
+    "emailOpenedNote": "Your email app should open with the pre-filled request. Please press Send in your email to deliver it to our team.",
     "formNote": "We'll call you back within a few hours. No spam, ever.",
     "successTitle": "Request received!",
     "successBody": "We'll call you back at {{phone}} within a few hours.",
     "submitAnother": "Submit another"
   },
   "footer": {
-    "brandDesc": "Surprise planning team based in Dukem/Bishoftu, serving Addis Ababa and surrounding areas. We turn your love into moments they'll never forget.",
+    "brandDesc": "Surprise planning team based in Dukem/Bishoftu, serving Dukem/Bishoftu and surrounding areas. We turn your love into moments they'll never forget.",
     "quickLinks": "Quick links",
     "contact": "Contact",
     "rights": "All rights reserved."
   },
   "seo": {
-    "title": "Yehidat — Surprise Planning in Addis Ababa",
-    "description": "Yehidat plans surprise birthdays, anniversaries, graduations and more in Addis Ababa and surrounding areas. Packages from 4,000 ETB. We handle every detail.",
+    "title": "Yehidat — Surprise Planning Around Dukem/Bishoftu",
+    "description": "Yehidat plans surprise birthdays, anniversaries, graduations and more in Dukem/Bishoftu and surrounding areas. Packages from 3,999 ETB. We handle every detail.",
     "about": {
-      "title": "About Yehidat — Our Team | Surprise Planning in Addis Ababa",
-      "description": "Meet the Yehidat team. Surprise planners based in Dukem/Bishoftu, serving Addis Ababa and surrounding areas."
+      "title": "About Yehidat — Our Team | Surprise Planning Around Dukem/Bishoftu",
+      "description": "Meet the Yehidat team. Surprise planners based in Dukem/Bishoftu, serving Dukem/Bishoftu and surrounding areas."
+    },
+    "gallery": {
+      "title": "Yehidat Gallery — Memorable Surprises in Dukem/Bishoftu",
+      "description": "Explore photos and moments from surprise celebrations organized by Yehidat in Dukem/Bishoftu and surrounding areas."
     }
   },
   "about": {
     "eyebrow": "About Yehidat",
     "title": "The team behind every surprise",
-    "intro": "We are a small team based in Dukem/Bishoftu, planning surprises for people across Addis Ababa and surrounding areas. From your first call to the moment they walk in, we handle every detail so you can just enjoy it.",
+    "intro": "We are a small team based in Dukem/Bishoftu, planning surprises for people across Dukem/Bishoftu and surrounding areas. From your first call to the moment they walk in, we handle every detail so you can just enjoy it.",
     "howTitle": "How we work",
     "ctaTitle": "Ready to plan one?",
     "ctaButton": "Start your surprise"

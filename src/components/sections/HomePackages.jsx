@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Check } from "lucide-react";
 import { PACKAGES } from "../../data/constants";
 import { useAppStore } from "../../store/useAppStore";
 import Reveal from "../ui/Reveal";
@@ -18,7 +19,7 @@ function PackageCard({ pkg, delay }) {
   return (
     <Reveal
       delay={delay}
-      className={`relative rounded-2xl p-6 h-100 sm:h-160 sm:w-100 sm:w-auto transition-transform duration-200 hover:-translate-y-1 ${
+      className={`relative rounded-2xl p-6  sm:h-160 sm:w-auto transition-transform duration-200 hover:-translate-y-1 ${
         pkg.featured
           ? "bg-ink text-parchment border border-gold-edge/55"
           : "bg-parchment ribbon-border"
@@ -49,10 +50,10 @@ function PackageCard({ pkg, delay }) {
             key={item}
             className={`flex items-start gap-2.5 text-sm ${pkg.featured ? "text-parchment/75" : "text-ink-soft"}`}
           >
-            <span
-              className={`mt-1.5 w-1.5 h-1.5 min-w-1.5 rounded-full ${pkg.featured ? "bg-gold" : "bg-gold-deep"}`}
+            <Check
+              className={`mt-0.5 w-4 h-4 shrink-0 ${pkg.featured ? "text-gold" : "text-gold-deep"}`}
             />
-            {item}
+            <span>{item}</span>
           </li>
         ))}
       </ul>
@@ -76,7 +77,7 @@ function PackageCard({ pkg, delay }) {
   );
 }
 
-export default function Packages() {
+export default function HomePackages() {
   const { t } = useTranslation();
 
   return (

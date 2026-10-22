@@ -1,12 +1,28 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 // ! internal imports
-import Hero from "../components/sections/Hero.jsx";
-import Occasions from "../components/sections/Occasions.jsx";
-import HowItWorks from "../components/sections/HowItWorks.jsx";
-import Packages from "../components/sections/Packages.jsx";
-import Gallery from "../components/sections/Gallery.jsx";
-import Contact from "../components/sections/Contact.jsx";
+import Hero from "../components/sections/HomeHero.jsx";
+import Occasions from "../components/sections/HomeOccasions.jsx";
+import HowItWorks from "../components/sections/HomeHowItWorks.jsx";
+import Packages from "../components/sections/HomePackages.jsx";
+import Gallery from "../components/sections/HomeGallery.jsx";
+import Contact from "../components/sections/HomeContact.jsx";
 
 export default function Home() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [hash]);
+
   return (
     <>
       <Hero />
