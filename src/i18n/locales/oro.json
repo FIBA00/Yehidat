@@ -106,6 +106,8 @@
     "messageLabel": "Anything you'd like us to know?",
     "messagePlaceholder": "Tell us a little about who you're surprising…",
     "submit": "Send request →",
+    "navigatingEmail": "Xalayaa erguuf appii imeelii keessan bannaara...",
+    "emailOpenedNote": "Appiin imeelii keessan odeeffannoo guutameen banama. Ergaan keessan akka nu qaqqabuuf maaloo imeelii keessan keessaa 'Ergi' (Send) cuqaasaa.",
     "formNote": "We'll call you back within a few hours. No spam, ever.",
     "successTitle": "Request received!",
     "successBody": "We'll call you back at {{phone}} within a few hours.",

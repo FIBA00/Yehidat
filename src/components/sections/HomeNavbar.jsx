@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { localeFromPath, localizedPath, pagePath } from "../../i18n/routes";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
@@ -39,12 +40,11 @@ function LanguageSwitcher() {
 
 export default function HomeNavbar() {
   const { t } = useTranslation();
-  const baseUrl = import.meta.env.BASE_URL;
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const locale = localeFromPath(pathname);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
-  const basePath = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -57,8 +57,16 @@ export default function HomeNavbar() {
   const handleAnchor = (href) => (e) => {
     if (href.startsWith("#")) {
       e.preventDefault();
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false);
+      const el = document.querySelector(href);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 80);
+      } else {
+        const homePath = localizedPath(locale, "/");
+        navigate(`${homePath}${href}`);
+      }
     }
   };
 
@@ -117,19 +125,15 @@ export default function HomeNavbar() {
            
             <button
               onClick={() => setMenuOpen((o) => !o)}
-              className="flex flex-col gap-2 p-1"
+              className="p-1.5 text-ink hover:text-gold-deep transition-colors"
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
             >
-              <span
-                className={`block w-5 h-0.5 bg-ink rounded transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={`block w-5 h-0.5 bg-ink rounded transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block w-5 h-0.5 bg-ink rounded transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
+              {menuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>

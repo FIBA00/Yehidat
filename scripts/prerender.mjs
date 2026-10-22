@@ -7,7 +7,17 @@ import path from "node:path";
 
 const DIST = path.resolve("dist");
 const SSR_ENTRY = path.resolve("dist-ssr/entry-server.js");
-const ROUTES = ["/", "/am/", "/om/", "/about-us/", "/am/about-us/", "/om/about-us/"];
+const ROUTES = [
+  "/",
+  "/am/",
+  "/om/",
+  "/about-us/",
+  "/am/about-us/",
+  "/om/about-us/",
+  "/gallery/",
+  "/am/gallery/",
+  "/om/gallery/",
+];
 
 // Tags that headTags() owns. They are removed from the template first, so
 // the output never has two titles, descriptions, or canonical links.

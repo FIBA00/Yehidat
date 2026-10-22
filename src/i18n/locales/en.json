@@ -114,6 +114,8 @@
     "messageLabel": "Anything you'd like us to know?",
     "messagePlaceholder": "Tell us a little about who you're surprising…",
     "submit": "Send request →",
+    "navigatingEmail": "Opening your email app to send request...",
+    "emailOpenedNote": "Your email app should open with the pre-filled request. Please press Send in your email to deliver it to our team.",
     "formNote": "We'll call you back within a few hours. No spam, ever.",
     "successTitle": "Request received!",
     "successBody": "We'll call you back at {{phone}} within a few hours.",
@@ -131,6 +133,10 @@
     "about": {
       "title": "About Yehidat — Our Team | Surprise Planning Around Dukem/Bishoftu",
       "description": "Meet the Yehidat team. Surprise planners based in Dukem/Bishoftu, serving Dukem/Bishoftu and surrounding areas."
+    },
+    "gallery": {
+      "title": "Yehidat Gallery — Memorable Surprises in Dukem/Bishoftu",
+      "description": "Explore photos and moments from surprise celebrations organized by Yehidat in Dukem/Bishoftu and surrounding areas."
     }
   },
   "about": {

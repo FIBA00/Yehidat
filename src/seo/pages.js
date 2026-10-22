@@ -11,6 +11,10 @@ export const PAGES = {
     titleKey: "seo.about.title",
     descriptionKey: "seo.about.description",
   },
+  "/gallery": {
+    titleKey: "seo.gallery.title",
+    descriptionKey: "seo.gallery.description",
+  },
 };
 
 // Looks up a page by path, ignoring a trailing slash.
