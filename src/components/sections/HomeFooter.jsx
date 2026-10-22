@@ -68,6 +68,8 @@ const QUICK_LINK_KEYS = [
   { key: "team", href: "/team" },
 ];
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeFooter() {
   const { pathname } = useLocation();
   const locale = localeFromPath(pathname);

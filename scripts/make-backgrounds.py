@@ -84,6 +84,7 @@ def main():
     if not SRC.exists():
         sys.exit(f"Nothing to blur: {SRC} does not exist. Run `npm run backgrounds` after adding photos.")
     OUT.mkdir(parents=True, exist_ok=True)
+
     sources = sorted(p for p in SRC.glob("*.webp") if is_main_variant(p))
     if not sources:
         print(f"No background photos in {SRC}. Manifest left empty.")

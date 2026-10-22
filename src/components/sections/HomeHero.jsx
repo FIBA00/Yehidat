@@ -19,6 +19,8 @@ const HERO_SLIDES = HERO_PHOTOS.map((photo) => ({
   src: { avif: photo.avif, webp: photo.webp },
 }));
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeHero() {
   const { t } = useTranslation();
   const clearSelection = useAppStore((s) => s.clearSelection);

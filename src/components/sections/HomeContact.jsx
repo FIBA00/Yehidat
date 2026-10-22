@@ -62,6 +62,8 @@ function ChannelCard({ icon, label, value, href, external }) {
   );
 }
 
+import SectionBackground from "../ui/SectionBackground";
+
 export default function HomeContact() {
   const { t } = useTranslation();
   const selectedOccasion = useAppStore((s) => s.selectedOccasion);
