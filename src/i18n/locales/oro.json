@@ -6,15 +6,18 @@
     "gallery": "Suurale",
     "cta": "Surprise karoorsi",
     "about": "Waa'ee Keenya",
-    "team": "Garee Keenya"
+    "team": "Garee Keenya",
+    "trustBadge": "Dhiheessa Iccitii %100 • Dukam, Bishooftuu fi Naannoo Ishee",
+    "conciergeChat": "Qindeessaa"
   },
   "hero": {
     "tag": "Addis Ababa's Surprise Specialists",
+    "discretionPill": "Dhiheessa Iccitii %100 • Dukam fi Bishooftuu",
     "titleLine1": "Surprises Godhi",
     "titleEmphasis": "Imimman Gammachu Bossissi",
     "subtitle": "Eenyun isinif haa gammachisnu ?. Hunduma isa nuti ni dhunfanne hojjanna  Ababoo, cake, babbarechu, iddo qophi hunduma akka hin irranfatamne goona.",
     "ctaPrimary": "Karoorsi Surprise",
-    "ctaSecondary": "Akkamitti isa jedhu ilaali",
+    "ctaSecondary": "Gochawwan Ilaalaa",
     "trustCount": "200+",
     "trustLabel": "surprises kan bara darbe",
     "badgeLabel": "Next surprise in",
@@ -24,6 +27,7 @@
   "occasions": {
     "eyebrow": "Any reason to celebrate",
     "title": "We plan surprises for every occasion",
+    "subtitle": "Qophii surprise iccitii guutuun qophaa'u filachuuf ayyaana barbaaddan filadhaa.",
     "birthday": "Birthday",
     "anniversary": "Anniversary",
     "graduation": "Graduation",
@@ -31,17 +35,29 @@
     "fathersDay": "Father's Day",
     "mothersDay": "Mother's Day",
     "promotion": "Promotion",
-    "justBecause": "Just Because"
+    "justBecause": "Just Because",
+    "badges": {
+      "birthday": "Keekii & Faaya",
+      "anniversary": "Jaalala",
+      "graduation": "Eebbifama",
+      "valentines": "Jaalala",
+      "fathersDay": "Galata",
+      "mothersDay": "Abaaboo",
+      "promotion": "Milkaa'ina",
+      "justBecause": "Gammachuu"
+    }
   },
   "how": {
     "eyebrow": "Simple process",
     "title": "How it works",
+    "subtitle": "Karoora keessan irraa kaasee hanga yeroo dinqisiisaatti tarkaanfiiwwan salphaa sadii.",
     "step1Title": "You tell us",
     "step1Body": "Call or WhatsApp us with who you want to surprise, the occasion, and when. Our team guides you through the rest.",
     "step2Title": "We prepare everything",
     "step2Body": "We source the cake, flowers, decorations, venue setup and more — you don't lift a finger. We confirm when it's all ready.",
     "step3Title": "They're surprised",
-    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit."
+    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit.",
+    "secrecyFootnote": "%100 Iccitii: Hanga yeroo gubbaatti mul'atutti waan tokkoyyuu hin shakkan."
   },
   "packages": {
     "eyebrow": "Choose your package",
@@ -51,6 +67,12 @@
     "depositNote": "ETB {{amount}} deposit to confirm",
     "mostPopular": "Most Popular",
     "discountOff": "Hir'ina {{percent}}%",
+    "categories": {
+      "cake": "Keekii",
+      "flowers": "Abaaboo",
+      "atmosphere": "Haala Naannoo",
+      "memories": "Yaadannoo"
+    },
     "basic": {
       "name": "Basic",
       "description": "A warm, heartfelt surprise for the people who matter most.",
@@ -89,6 +111,7 @@
     "eyebrow": "Real moments",
     "title": "Surprises we've brought to life",
     "subtitle": "Qophiiwwan keenya filatamoo fi gammachuu dhugaa daawwadhaa.",
+    "momentTag": "Yeroo Yehidat",
     "viewAll": "Suuraalee Hunda Ilaalaa",
     "breadcrumbHome": "Ka'umsa",
     "breadcrumbGallery": "Gaalerii",
@@ -98,8 +121,23 @@
     "filterSurprises": "Qophiiwwan",
     "filterCakes": "Keekii & Miidhagina",
     "filterOutdoor": "Bakkee",
+    "bookSetup": "Qophii kana qabsiisaa",
+    "ctaWhatsapp": "WhatsApp Kallattiin",
     "ctaTitle": "Qophii addaa qopheessuuf qophiidhaa?",
     "ctaButton": "Nu Wajjiin Qopheessaa"
+  },
+  "faq": {
+    "eyebrow": "Gaaffilee Yeroo Baay'ee Gaafataman",
+    "title": "Odoo Surprise Hin Karoorsin Dura Wanta Beekuu Qabdan",
+    "subtitle": "Iccitii eeguu, iddoowwan geessituu, filannoowwan addaa fi kaffaltii irratti deebiiwwan keenya.",
+    "q1": "Surprise %100 iccitii akka ta'u akkamitti wabii taatu?",
+    "a1": "Iccitii eeguun dhimma keenya isa jalqabaati. Namoota biroo wajjin yeroo mari'annu waa'ee surprise tasuma hin kaafnu, konkolaataan keenya asxaa hin qabu, gareen keenyas hanga sa'aatii dhumaatti qindoomina iccitii cimaan hojjeta.",
+    "q2": "Iddoowwan kamitti dhiheessitu?",
+    "a2": "Dukam, Bishooftuu fi Naannoo Shawaa Bahaa hunda keessatti ni dhiheessina. Akkasumas fedhii addaatiin Finfinnee fi naannoo isheetti ni qindeessina.",
+    "q3": "Mi'aawa keekii, abaaboo ykn faaya jijjiiruu nan danda'aa?",
+    "a3": "Eeyyee, guutummaatti! Fedhii fi jaalala keessan irratti hundaa'uun gosa keekii, bifa abaaboo, baalloonii fi waraqaa ergaa harkaan barreeffamu hunda ni qindeessina.",
+    "q4": "Yeroo hangam dura qabsiisuu qaba, kaffaltiin duraa hoo meeqa?",
+    "a4": "Qophii idileetiif sa'aatii 24-48 dura akka nu qunnamtan gorsina. Kaffaltiin duraa %25 guyyaa keessan mirkaneessa."
   },
   "contact": {
     "eyebrow": "Get in touch",
@@ -111,6 +149,9 @@
     "hoursValue": "Mon–Sun, 9am–5pm",
     "formTitle": "Request a callback",
     "formSubtitle": "Leave your details and we'll call you back within a few hours.",
+    "discretionNotice": "Iccitii %100: Surprise keessan tasuma hin beeksisnu. Hanga daqiiqaa dhumaatti iccitiin qindeessina.",
+    "selectedPackageBadge": "Kuufama Filatame",
+    "changePackage": "Jijjiiri",
     "nameLabel": "Your name",
     "namePlaceholder": "Abebe Girma",
     "phoneLabel": "Phone number",
@@ -129,10 +170,40 @@
     "submitAnother": "Submit another"
   },
   "footer": {
-    "brandDesc": "Addis Ababa's dedicated surprise planning team. We turn your love into moments they'll never forget.",
+    "brandDesc": "Garee qophii surprise addaa Dukam, Bishooftuu fi Naannoo Shawaa Bahaatti tajaajilu. Jaalala keessan gara yaadannoo bara baraatti geeddara.",
     "quickLinks": "Quick links",
-    "contact": "Contact",
-    "rights": "All rights reserved."
+    "occasionsTitle": "Gochawwan fi Tajaajiloota",
+    "companyTitle": "Dhaabbata",
+    "contact": "Qindeessaa fi Quunnamtii",
+    "rights": "Mirgi hundi seeraan eegamaadha.",
+    "coverageNotice": "Dukam, Bishooftuu fi Naannoo Shawaa Bahaatti iccitii guutuun kan dhihaatu (Finfinnee qindoomina duraaniin).",
+    "hours": "Wiixata–Dilbata: Sa'aatii 2:00 WD – 2:00 WB",
+    "trustPillars": {
+      "discretionTitle": "Iccitii Eegame %100",
+      "discretionDesc": "Karoora irraa kaasee hanga yeroo dinqisiisaatti iccitii guutuun kan hojjatamu.",
+      "cakeTitle": "Keekii Haaraa",
+      "cakeDesc": "Guyyaa gammachuu keessaniitti keekii babbareedan qophaa'ee dhihaata.",
+      "punctualTitle": "Yeroon Gahuu",
+      "punctualDesc": "Yeroon surprise akka hin dogongorreef qindoomina sa'aatii sirrii.",
+      "calligraphyTitle": "Waraqaa Harkaan Barreeffame",
+      "calligraphyDesc": "Kuusaa hunda keessatti waraqaan ergaa harkaan barreeffame ni dabalama."
+    }
+  },
+  "seo": {
+    "title": "Yehidat | Qophii fi Dizaayinii Gammachuu Iccitii Dukam fi Bishooftuu",
+    "description": "Yehidat waldhabdee fi gammachuu hin eegamne Dukam, Bishooftuu fi Finfinnee keessatti iccitii %100 qulqullinaan qopheessa.",
+    "about": {
+      "title": "Waa'ee Yehidat | Ogummaa Qophii Gammachuu Addaa",
+      "description": "Waa'ee Yehidat, mul'ata keenya, fi garee qophii gammachuu Dukam fi Bishooftuu keessaa baradhaa."
+    },
+    "gallery": {
+      "title": "Galarii Suuraa | Yeroo Gammachuu Yehidat",
+      "description": "Suuraalee qophii fi dizaayiniiwwan addaa Yehidat qopheesse daawwadhaa."
+    },
+    "team": {
+      "title": "Garee Keenya | Dizaayinaroota fi Qopheessitoota Yehidat",
+      "description": "Garee ogummaa fi dandeettii qabu kan gammachuu keessan dhugoomsu waliin wal baraa."
+    }
   },
   "team": {
     "eyebrow": "Garee Keenya",
@@ -146,6 +217,18 @@
     "photo2": "Miidhagina fi Abaaboo",
     "photo3": "Garee Qophii Yehidat",
     "photo4": "Ergaa fi Gammachuu Dhiyeessuu",
+    "member1Role": "Daayrektara Qophii fi Dizaayinii",
+    "member1Passion": "“Miira jaalalaa gara gammachuu hin irraanfatamneetti jijjiiruu.”",
+    "member1Specialty": "Surprise Addaa fi Qindoomina Iccitii",
+    "member2Role": "Dizaayinii Abaaboo fi Miidhaginaa",
+    "member2Passion": "“Yeroo isaan ol seenan akka dinqisiifamaniif abaaboo hunda of eeggannoon filachuu.”",
+    "member2Specialty": "Abaaboo Filatamaa fi Ifa Bareedaa",
+    "member3Role": "Qindeessaa Keekii fi Mi'aawaa",
+    "member3Passion": "“Keekiin hundi akka bifa isaatti mi'aawaa fi qulqulluu akka ta'u gochuu.”",
+    "member3Specialty": "Keekii Mi'aawaa fi Kuusaa Kennaa",
+    "member4Role": "Hogganaa Geejjibaa fi Sa'aatii Iccitii",
+    "member4Passion": "“Sa'aatii eeguun mallatto keenya. Daqiiqaa muraasa yoo ture surprise hin ta'u.”",
+    "member4Specialty": "Sa'aatii Sirrii fi Qophii Duraa",
     "valuesTitle": "Maaliif Nu Filatu?",
     "val1Title": "100% Iccitii Kan Eegame",
     "val1Desc": "Hanga yeroon qophii gahuutti iccitii guutuudhaan qopheessina.",
@@ -153,7 +236,44 @@
     "val2Desc": "Wanti hundi qulqullina olaanaadhaan filatama.",
     "val3Title": "Sa'aatii Eeguu",
     "val3Desc": "Sa'aatii sirriitti dhiyaachuudhaan gammachuu uumna.",
+    "conciergeTitle": "Garee Qophii Keenya Wajjin Haasa'aa",
+    "conciergeSubtitle": "Yaada addaa, iddoo filatamaa ykn sa'aatii murtaa'aa qabduu? Gareen keenya Bishooftuu, Dukam fi Shawaa Bahaatti qophii keessan qindeessuuf qophiidha.",
+    "conciergeButton": "Marii Qophii Gaafadhaa",
     "ctaTitle": "Namoota jaallattaniif qophii addaa qopheessuuf qophiidhaa?",
     "ctaButton": "Nu Wajjiin Qopheessaa"
+  },
+  "about": {
+    "eyebrow": "Waa'ee Yehidat",
+    "title": "Aartii Dinqisiisaa Hin Eegamne",
+    "heroSubtitle": "Dukam, Bishooftuu fi Shawaa Bahaatti qophiiwwan surprise addaa, kennaa miidhagaa fi dhiheessa iccitii.",
+    "discretionBadge": "Qindoomina Iccitii %100 • Shawaa Bahaa",
+    "intro": "Nuti garee qophii surprise addaa Dukam fi Bishooftuu keessatti hundeeffame yoo taanu, Shawaa Bahaa fi Finfinneetti yeroo gammachuu addaa uumna.",
+    "storySectionTitle": "Seenaa Keenya: Aartii Dinqisiisaa Hin Eegamne",
+    "storyParagraph1": "Yehidat kan hundeeffame amantii salphaa tokkorratti: jaalalli fi ayyaanonni addaa gochawwan nama ajaa'ibsiisan kan hin eegamne qabaachuu qabu. Abaaboo haaraa argachuu, keekii addaa qopheessuu, faaya qindeessuu fi sa'aatii sirriitti surprise gochuun rakkisaadha — keessumaa nama wajjin jiraattan jalaa iccitiidhaan ykn biyya alaarraa yeroo qindeessan.",
+    "storyParagraph2": "Nuti michuu qophii iccitii keessan ta'uuf kaane. Mana qarqara Haroo Bishooftuu irraa kaasee hanga manneen Dukamtti, gareen keenya waan hunda iccitiin qindeessa. Eenyuufi yoom akka ta'e qofa nutti himaa; nuti iccitii hundaa ni eegna; gammachuu isaa guutummaatti isintu fudhata.",
+    "quoteText": "“Eenyuuf, eessatti fi yoom akka ta'e nutti himaa. Iccitii hundaa nutu qindeessa. Gammachuu guutuu isintu fudhata.”",
+    "statSurprises": "200+ Qophiiwwan Milkaa'an",
+    "statDiscretion": "Iccitii %100 Eegame",
+    "statHubs": "Wiirtuu Dukam fi Bishooftuu",
+    "pillarsTitle": "Utubaalee Hojii Keenyaa 3",
+    "pillarsSubtitle": "Qophiin nuti qopheessinu hundi ulaagaalee qulqullinaa sadii irratti hundaa'a.",
+    "howTitle": "Akkamitti Akka Qindeessinu",
+    "pillar1Title": "Wabii Iccitii %100",
+    "pillar1Desc": "Wanti tokkoyyuu hin shakkamu. Konkolaataa asxaa hin qabne, quunnamtii iccitii fi hanga sa'aatii dhumaatti qophii dhokataa.",
+    "pillar2Title": "Ogummaa fi Qulqullina Olaanaa",
+    "pillar2Desc": "Keekii haaraa guyyuma sana bilchaate, abaaboo filatamaa, waraqaa harkaan barreeffame fi miidhagina addaa.",
+    "pillar3Title": "Qindoomina Hir'ina Hin Qabne",
+    "pillar3Desc": "Sa'aatii daqiiqaa eeggate. Iddoo qophii wajjin kallattiin qindoomina uumuun imimmaan gammachuu viidiyo qulqullina olaanaatiin waraabna.",
+    "presenceTitle": "Tajaajila Naannoo Keenyaa",
+    "presenceSubtitle": "Shawaa Bahaatti hidda gadi dhaabbachuun dhiheessa saffisaa fi qindoomina gaarii uumneerra.",
+    "locationBishoftuTitle": "Qophii Haroo fi Rizoortii Bishooftuu",
+    "locationBishoftuDesc": "Qarqara harootti irbaata jaalalaa, qophii viillaa fi ayyaaneffannaa waggaa rizoortiiwwan Bishooftuutti.",
+    "locationDukemTitle": "Wiirtuu Qindoomina Dukam",
+    "locationDukemDesc": "Mana keessatti jijjiirama surprise, ayyaana maatii, keekii dhiyeessuu fi wiirtuu tajaajila saffisaa.",
+    "locationEastShewaTitle": "Daandii Shawaa Bahaa fi Finfinnee",
+    "locationEastShewaDesc": "Daandii saffisaa irratti dhiheessa ariifataa, qophiiwwan dhaabbilee fi surprise biyya alaarraa abdataman.",
+    "chatWhatsapp": "WhatsApp irratti haasa'aa",
+    "ctaTitle": "Surprise Hin Irraanfatamne Qopheessuuf Qophiidhaa?",
+    "ctaButton": "Surprise Keessan Jalqabaa"
   }
 }

@@ -41,3 +41,6 @@ src/assets/about/*
 src/assets/backgrounds/*
 
 __pycache__/
+
+# Multi-agent coordination runtime & teamwork artifacts
+.agents/

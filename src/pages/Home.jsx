@@ -7,6 +7,7 @@ import Occasions from "../components/sections/HomeOccasions.jsx";
 import HowItWorks from "../components/sections/HomeHowItWorks.jsx";
 import Packages from "../components/sections/HomePackages.jsx";
 import Gallery from "../components/sections/HomeGallery.jsx";
+import FAQ from "../components/sections/HomeFAQ.jsx";
 import Contact from "../components/sections/HomeContact.jsx";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <HowItWorks />
       <Packages />
       <Gallery />
+      <FAQ />
       <Contact />
     </>
   );
