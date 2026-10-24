@@ -6,15 +6,18 @@
     "gallery": "Gallery",
     "cta": "Plan a Surprise",
     "about": "About us",
-    "team": "Meet the Team"
+    "team": "Meet the Team",
+    "trustBadge": "100% Secret & Discreet Delivery • Dukem, Bishoftu & Surrounds",
+    "conciergeChat": "Concierge"
   },
   "hero": {
     "tag": "Surprise Planning Team",
+    "discretionPill": "100% Secret & Discreet Surprise Delivery",
     "titleLine1": "Yehidat",
     "titleEmphasis": "Suprise Planning and Delivery ",
     "subtitle": "You tell us who to surprise and when. We handle every detail — flowers, cake, decor, venue — and deliver a moment they'll never forget.",
     "ctaPrimary": "Plan a Surprise",
-    "ctaSecondary": "See how it works",
+    "ctaSecondary": "Explore Experiences",
     "trustCount": "200+",
     "trustLabel": "surprises planned this year",
     "badgeLabel": "Next surprise in",
@@ -24,6 +27,7 @@
   "occasions": {
     "eyebrow": "Any reason to celebrate",
     "title": "We plan surprises for every occasion",
+    "subtitle": "Select a celebration to customize a turnkey surprise crafted in complete secrecy.",
     "birthday": "Birthday",
     "anniversary": "Anniversary",
     "graduation": "Graduation",
@@ -31,17 +35,29 @@
     "fathersDay": "Father's Day",
     "mothersDay": "Mother's Day",
     "promotion": "Promotion",
-    "justBecause": "Just Because"
+    "justBecause": "Just Because",
+    "badges": {
+      "birthday": "Cake & Spark",
+      "anniversary": "Romance",
+      "graduation": "Milestone",
+      "valentines": "Love",
+      "fathersDay": "Gratitude",
+      "mothersDay": "Florals",
+      "promotion": "Success",
+      "justBecause": "Pure Joy"
+    }
   },
   "how": {
     "eyebrow": "Simple process",
     "title": "How it works",
+    "subtitle": "Three effortless steps from your vision to an unforgettable emotional reveal.",
     "step1Title": "You tell us",
     "step1Body": "Call or WhatsApp us with who you want to surprise, the occasion, and when. Our team guides you through the rest.",
     "step2Title": "We prepare everything",
     "step2Body": "We source the cake, flowers, decorations, venue setup and more — you don't lift a finger. We confirm when it's all ready.",
     "step3Title": "They're surprised",
-    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit."
+    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit.",
+    "secrecyFootnote": "100% Secret & Discreet: They will never suspect a thing until the reveal moment."
   },
   "packages": {
     "eyebrow": "Choose your package",
@@ -51,6 +67,12 @@
     "depositNote": "ETB {{amount}} deposit to confirm",
     "mostPopular": "Most Popular",
     "discountOff": "{{percent}}% OFF",
+    "categories": {
+      "cake": "Cake",
+      "flowers": "Flowers",
+      "atmosphere": "Atmosphere",
+      "memories": "Memories"
+    },
     "basic": {
       "name": "Basic",
       "description": "A warm, heartfelt surprise for the people who matter most.",
@@ -96,6 +118,7 @@
     "eyebrow": "Real moments",
     "title": "Surprises we've brought to life",
     "subtitle": "Explore our favorite setups, genuine reactions, and sweet moments from across the city.",
+    "momentTag": "Yehidat Moment",
     "viewAll": "View Full Gallery",
     "breadcrumbHome": "Home",
     "breadcrumbGallery": "Gallery",
@@ -105,8 +128,23 @@
     "filterSurprises": "Surprises",
     "filterCakes": "Cakes & Details",
     "filterOutdoor": "Outdoor Setups",
+    "bookSetup": "Book this setup",
+    "ctaWhatsapp": "Direct WhatsApp Inquiry",
     "ctaTitle": "Ready to plan your special surprise?",
     "ctaButton": "Plan a Surprise With Us"
+  },
+  "faq": {
+    "eyebrow": "Common Questions",
+    "title": "Everything You Need to Know",
+    "subtitle": "Direct answers to the most common questions about our secret coordination and deliveries.",
+    "q1": "How do you guarantee the surprise stays 100% secret?",
+    "a1": "Confidentiality is our top priority. We never mention the surprise when contacting third parties, delivery vehicles are unmarked, and our team coordinates discreetly with your trusted contact or venue staff so the recipient has no idea until the grand reveal.",
+    "q2": "Which areas do you deliver to?",
+    "a2": "We deliver across Dukem, Bishoftu, and the East Shewa Zone. We can also coordinate customized surprise setups in Addis Ababa and surrounding towns upon advance request.",
+    "q3": "Can I customize the cake flavors, flowers, or decorations?",
+    "a3": "Absolutely. All packages can be tailored to your recipient's tastes. From bespoke cake flavors (chocolate fudge, red velvet, vanilla berry) to custom flower colors, balloon arches, and handwritten calligraphy letters, we curate every detail.",
+    "q4": "How far in advance should I book, and what deposit is required?",
+    "a4": "We recommend booking at least 24–48 hours in advance for standard setups, though same-day coordination may be available depending on availability. A 25% deposit secures your date and allows our artisans to begin preparation."
   },
   "contact": {
     "eyebrow": "Get in touch",
@@ -118,6 +156,9 @@
     "hoursValue": "Mon–Sun, 9am–5pm",
     "formTitle": "Request a callback",
     "formSubtitle": "Leave your details and we'll call you back within a few hours.",
+    "discretionNotice": "100% Confidential: We never spoil the surprise. Our team coordinates secretly until the reveal.",
+    "selectedPackageBadge": "Package Selected",
+    "changePackage": "Change",
     "nameLabel": "Your name",
     "namePlaceholder": "Abebe Girma",
     "phoneLabel": "Phone number",
@@ -136,10 +177,24 @@
     "submitAnother": "Submit another"
   },
   "footer": {
-    "brandDesc": "Surprise planning team based in Dukem/Bishoftu, serving Dukem/Bishoftu and surrounding areas. We turn your love into moments they'll never forget.",
+    "brandDesc": "Boutique surprise planning and luxury celebration delivery across Dukem, Bishoftu, and East Shewa Zone. We turn heartfelt love into unforgettable memories.",
     "quickLinks": "Quick links",
-    "contact": "Contact",
-    "rights": "All rights reserved."
+    "occasionsTitle": "Occasions & Services",
+    "companyTitle": "Company",
+    "contact": "Concierge & Inquiries",
+    "rights": "All rights reserved.",
+    "coverageNotice": "Handcrafted and delivered in complete secrecy across Dukem, Bishoftu, and East Shewa (Addis Ababa by arrangement).",
+    "hours": "Mon–Sun: 8:00 AM – 8:00 PM",
+    "trustPillars": {
+      "discretionTitle": "100% Secret & Discreet",
+      "discretionDesc": "Uncompromising confidentiality from planning to the reveal moment.",
+      "cakeTitle": "Fresh Artisan Cakes",
+      "cakeDesc": "Bespoke bakery creations delivered bakery-fresh on your celebration day.",
+      "punctualTitle": "Punctual Delivery",
+      "punctualDesc": "Exact-hour coordination to guarantee the perfect surprise timing.",
+      "calligraphyTitle": "Custom Calligraphy",
+      "calligraphyDesc": "Handwritten bespoke message card included with every package."
+    }
   },
   "seo": {
     "title": "Yehidat — Surprise Planning Around Dukem/Bishoftu",
@@ -169,6 +224,18 @@
     "photo2": "Creative Decor & Floral Styling",
     "photo3": "Celebration Planning Team",
     "photo4": "Special Moments & Delivery",
+    "member1Role": "Lead Surprise Director & Concept Designer",
+    "member1Passion": "“Turning genuine human emotion into breathtaking, unforgettable realities.”",
+    "member1Specialty": "Milestone Surprises & Covert Coordination",
+    "member2Role": "Artisan Floral Designer & Tablescape Stylist",
+    "member2Passion": "“Selecting every single petal to evoke pure astonishment the moment they step in.”",
+    "member2Specialty": "Bespoke Bouquets & Ambient Lighting",
+    "member3Role": "Culinary & Confectionery Coordinator",
+    "member3Passion": "“Ensuring every celebratory cake tastes as divine as it looks.”",
+    "member3Specialty": "Custom Cake Flavors & Premium Gift Pairings",
+    "member4Role": "Stealth Logistics & On-Site Timing Lead",
+    "member4Passion": "“Precision is our hallmark. A surprise delivered thirty seconds late is no longer a surprise.”",
+    "member4Specialty": "Exact-Minute Arrival & Venue Pre-Staging",
     "valuesTitle": "Why Families & Friends Trust Us",
     "val1Title": "100% Secret & Discreet",
     "val1Desc": "We coordinate behind the scenes so the surprise stays completely unexpected until the very second they walk in.",
@@ -176,15 +243,44 @@
     "val2Desc": "Every bouquet, pastry, balloon arch, and gift is chosen with utmost care to ensure luxury presentation.",
     "val3Title": "Punctual Delivery",
     "val3Desc": "Timing is everything in surprises. We guarantee on-the-dot arrival and seamless execution.",
+    "conciergeTitle": "Speak With Our Surprise Planners",
+    "conciergeSubtitle": "Have a unique idea, custom venue, or strict timing requirement? Our team is on standby to coordinate your bespoke celebration across Bishoftu, Dukem, and East Shewa.",
+    "conciergeButton": "Request a Consultation",
     "ctaTitle": "Ready to surprise someone special?",
     "ctaButton": "Plan a Surprise With Us"
   },
   "about": {
     "eyebrow": "About Yehidat",
-    "title": "The team behind every surprise",
-    "intro": "We are a small team based in Dukem/Bishoftu, planning surprises for people across Dukem/Bishoftu and surrounding areas. From your first call to the moment they walk in, we handle every detail so you can just enjoy it.",
-    "howTitle": "How we work",
-    "ctaTitle": "Ready to plan one?",
-    "ctaButton": "Start your surprise"
+    "title": "The Art of the Unexpected",
+    "heroSubtitle": "Boutique surprise planning, artisan gifts, and covert celebration delivery across Dukem, Bishoftu, and East Shewa.",
+    "discretionBadge": "100% Discreet Coordination • East Shewa",
+    "intro": "We are a boutique surprise planning studio based in Dukem & Bishoftu, curating extraordinary milestone celebrations across East Shewa and Addis Ababa.",
+    "storySectionTitle": "Our Story: The Art of the Unexpected",
+    "storyParagraph1": "Yehidat was born from a simple conviction: love and milestone celebrations deserve grand, breathtaking gestures that catch people completely off guard. Sourcing fresh flowers, custom confectionery, festive decor, and timing a surprise to the exact minute is stressful — especially when you're trying to keep it a secret from the person you live with or coordinating from abroad.",
+    "storyParagraph2": "We stepped in to be your stealth celebration partner. From Lake Bishoftu garden villas to Dukem family homes, our local team orchestrates every single element in complete discretion. You tell us who and when; we handle every secret detail; you take all the heartfelt credit.",
+    "quoteText": "“You tell us who, where, and when. We handle every secret detail. You take all the credit.”",
+    "statSurprises": "200+ Surprises Planned",
+    "statDiscretion": "100% Confidentiality Record",
+    "statHubs": "Dukem & Bishoftu Hubs",
+    "pillarsTitle": "The 3 Pillars of Our Craft",
+    "pillarsSubtitle": "Every celebration we create is grounded in three uncompromising standards of excellence.",
+    "howTitle": "How We Coordinate",
+    "pillar1Title": "100% Discretion Guarantee",
+    "pillar1Desc": "Zero spoilers. Unmarked delivery coordination, discreet vendor communications, and airtight cover stories until the exact moment of reveal.",
+    "pillar2Title": "Artisan Craftsmanship",
+    "pillar2Desc": "Freshly baked artisan cakes, premium florals selected on the day of delivery, custom calligraphy postcards, and precision decor.",
+    "pillar3Title": "Flawless Coordination",
+    "pillar3Desc": "Punctual to the exact minute. We coordinate directly with venues, trusted conspirators, and capture the authentic reaction on high-definition video.",
+    "presenceTitle": "Local Operational Presence",
+    "presenceSubtitle": "Rooted in East Shewa with rapid on-the-ground execution and deep local vendor partnerships.",
+    "locationBishoftuTitle": "Bishoftu Lake & Resort Staging",
+    "locationBishoftuDesc": "Romantic lakeside dinner surprises, lakeside villa setups, and milestone anniversaries at Bishoftu's premier resorts.",
+    "locationDukemTitle": "Dukem Central Operations",
+    "locationDukemDesc": "Home surprise transformations, family milestones, bakery dispatch, and rapid local delivery hub.",
+    "locationEastShewaTitle": "East Shewa & Addis Corridor",
+    "locationEastShewaDesc": "Express delivery across the expressway corridor, specialized corporate milestones, and diaspora-funded surprises.",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "ctaTitle": "Ready to Plan an Unforgettable Surprise?",
+    "ctaButton": "Start Your Surprise"
   }
 }
