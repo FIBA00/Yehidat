@@ -1,18 +1,18 @@
-# GATE STATUS — Milestone M1
+# GATE STATUS — Yehidat Redesign
 
-## Gate — Iteration 1
+## Milestone M1: Research & Project Docs
+Gate Result: **PASS** (Reviewer 1 APPROVE, Reviewer 2 APPROVE, Challenger 1 APPROVE, Challenger 2 APPROVE, Auditor CLEAN)
+
+---
+
+## Milestone M2: Navigation & Footer Redesign
 | Agent | Role | Verdict | Source |
 |-------|------|---------|--------|
-| worker_m1 (f3524bd5) | teamwork_preview_worker | DONE (build passed, 12 routes prerendered) | handoff.md |
-| reviewer_m1_1 (8924a353) | teamwork_preview_reviewer | APPROVE | handoff.md |
-| reviewer_m1_2 (5a9ce3c0) | teamwork_preview_reviewer | APPROVE | handoff.md |
-| challenger_m1_1 (db12af29) | teamwork_preview_challenger | APPROVE | handoff.md |
-| challenger_m1_2 (ed14c7da) | teamwork_preview_challenger | APPROVE | handoff.md |
-| auditor_m1 (291948c9) | teamwork_preview_auditor | CLEAN | handoff.md |
+| worker_m2 (56f0c9ca) | teamwork_preview_worker | DONE (build passed, oxlint passed) | handoff.md |
+| reviewer_m2_1 (e6613347) | teamwork_preview_reviewer | PENDING | handoff.md |
+| reviewer_m2_2 (daf9b349) | teamwork_preview_reviewer | PENDING | handoff.md |
+| challenger_m2_1 (7fcf8936) | teamwork_preview_challenger | PENDING | handoff.md |
+| challenger_m2_2 (7115c111) | teamwork_preview_challenger | PENDING | handoff.md |
+| auditor_m2 (4c1d630a) | teamwork_preview_auditor | PENDING | handoff.md |
 
-Gate Result: **PASS**
-Milestone M1 (Competitor Research & Global Architecture) is officially completed and signed off.
-All 8 competitors documented in DESIGN_RESEARCH.md with adopted patterns and regional rationale.
-PROJECT.md masterplan established with 20 itemized features and interface contracts.
-Build and SSG prerendering verified across all 12 routes.
-Zero integrity violations.
+Gate Result: **IN_PROGRESS**
