@@ -1,6 +1,9 @@
+// [Competitor Pattern: PartySlate Editorial Showcase]
+// Editorial photography preview featuring 4:5 aspect ratio cards, smooth hover zooms,
+// luxury dark gradient scrims, and contextual occasion captions linking to the full gallery.
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { GALLERY_PHOTOS } from "../../data/gallery";
 import { localeFromPath, localizedPath } from "../../i18n/routes";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
@@ -40,7 +43,7 @@ export default function HomeGallery() {
               <Reveal
                 key={item.id}
                 delay={index * 0.08}
-                className="group relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-edge/30 bg-parchment shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-gold"
+                className="group relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold-edge/30 bg-parchment/90 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-gold"
               >
                 <div className="absolute inset-0">
                   <ResponsiveImage
@@ -50,11 +53,15 @@ export default function HomeGallery() {
                     height={item.height}
                     sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 50vw"
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-108"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end p-4">
-                  <p className="text-xs font-semibold text-parchment tracking-wide">
+                <div className="absolute inset-0 bg-gradient-to-t from-gold-pale/95 via-gold-pale/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-4 sm:p-5">
+                  <span className="text-[10px] font-semibold tracking-wider uppercase text-gold mb-1 inline-flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-gold" />
+                    <span>{t("gallery.momentTag", "Yehidat Moment")}</span>
+                  </span>
+                  <p className="text-xs sm:text-sm font-medium text-ink leading-snug">
                     {item.alt}
                   </p>
                 </div>

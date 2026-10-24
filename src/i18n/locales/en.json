@@ -12,11 +12,12 @@
   },
   "hero": {
     "tag": "Surprise Planning Team",
+    "discretionPill": "100% Secret & Discreet Surprise Delivery",
     "titleLine1": "Yehidat",
     "titleEmphasis": "Suprise Planning and Delivery ",
     "subtitle": "You tell us who to surprise and when. We handle every detail — flowers, cake, decor, venue — and deliver a moment they'll never forget.",
     "ctaPrimary": "Plan a Surprise",
-    "ctaSecondary": "See how it works",
+    "ctaSecondary": "Explore Experiences",
     "trustCount": "200+",
     "trustLabel": "surprises planned this year",
     "badgeLabel": "Next surprise in",
@@ -26,6 +27,7 @@
   "occasions": {
     "eyebrow": "Any reason to celebrate",
     "title": "We plan surprises for every occasion",
+    "subtitle": "Select a celebration to customize a turnkey surprise crafted in complete secrecy.",
     "birthday": "Birthday",
     "anniversary": "Anniversary",
     "graduation": "Graduation",
@@ -33,17 +35,29 @@
     "fathersDay": "Father's Day",
     "mothersDay": "Mother's Day",
     "promotion": "Promotion",
-    "justBecause": "Just Because"
+    "justBecause": "Just Because",
+    "badges": {
+      "birthday": "Cake & Spark",
+      "anniversary": "Romance",
+      "graduation": "Milestone",
+      "valentines": "Love",
+      "fathersDay": "Gratitude",
+      "mothersDay": "Florals",
+      "promotion": "Success",
+      "justBecause": "Pure Joy"
+    }
   },
   "how": {
     "eyebrow": "Simple process",
     "title": "How it works",
+    "subtitle": "Three effortless steps from your vision to an unforgettable emotional reveal.",
     "step1Title": "You tell us",
     "step1Body": "Call or WhatsApp us with who you want to surprise, the occasion, and when. Our team guides you through the rest.",
     "step2Title": "We prepare everything",
     "step2Body": "We source the cake, flowers, decorations, venue setup and more — you don't lift a finger. We confirm when it's all ready.",
     "step3Title": "They're surprised",
-    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit."
+    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit.",
+    "secrecyFootnote": "100% Secret & Discreet: They will never suspect a thing until the reveal moment."
   },
   "packages": {
     "eyebrow": "Choose your package",
@@ -53,6 +67,12 @@
     "depositNote": "ETB {{amount}} deposit to confirm",
     "mostPopular": "Most Popular",
     "discountOff": "{{percent}}% OFF",
+    "categories": {
+      "cake": "Cake",
+      "flowers": "Flowers",
+      "atmosphere": "Atmosphere",
+      "memories": "Memories"
+    },
     "basic": {
       "name": "Basic",
       "description": "A warm, heartfelt surprise for the people who matter most.",
@@ -98,6 +118,7 @@
     "eyebrow": "Real moments",
     "title": "Surprises we've brought to life",
     "subtitle": "Explore our favorite setups, genuine reactions, and sweet moments from across the city.",
+    "momentTag": "Yehidat Moment",
     "viewAll": "View Full Gallery",
     "breadcrumbHome": "Home",
     "breadcrumbGallery": "Gallery",
@@ -110,6 +131,19 @@
     "ctaTitle": "Ready to plan your special surprise?",
     "ctaButton": "Plan a Surprise With Us"
   },
+  "faq": {
+    "eyebrow": "Common Questions",
+    "title": "Everything You Need to Know",
+    "subtitle": "Direct answers to the most common questions about our secret coordination and deliveries.",
+    "q1": "How do you guarantee the surprise stays 100% secret?",
+    "a1": "Confidentiality is our top priority. We never mention the surprise when contacting third parties, delivery vehicles are unmarked, and our team coordinates discreetly with your trusted contact or venue staff so the recipient has no idea until the grand reveal.",
+    "q2": "Which areas do you deliver to?",
+    "a2": "We deliver across Dukem, Bishoftu, and the East Shewa Zone. We can also coordinate customized surprise setups in Addis Ababa and surrounding towns upon advance request.",
+    "q3": "Can I customize the cake flavors, flowers, or decorations?",
+    "a3": "Absolutely. All packages can be tailored to your recipient's tastes. From bespoke cake flavors (chocolate fudge, red velvet, vanilla berry) to custom flower colors, balloon arches, and handwritten calligraphy letters, we curate every detail.",
+    "q4": "How far in advance should I book, and what deposit is required?",
+    "a4": "We recommend booking at least 24–48 hours in advance for standard setups, though same-day coordination may be available depending on availability. A 25% deposit secures your date and allows our artisans to begin preparation."
+  },
   "contact": {
     "eyebrow": "Get in touch",
     "title": "Ready to plan something special?",
@@ -120,6 +154,9 @@
     "hoursValue": "Mon–Sun, 9am–5pm",
     "formTitle": "Request a callback",
     "formSubtitle": "Leave your details and we'll call you back within a few hours.",
+    "discretionNotice": "100% Confidential: We never spoil the surprise. Our team coordinates secretly until the reveal.",
+    "selectedPackageBadge": "Package Selected",
+    "changePackage": "Change",
     "nameLabel": "Your name",
     "namePlaceholder": "Abebe Girma",
     "phoneLabel": "Phone number",

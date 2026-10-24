@@ -1,3 +1,7 @@
+// [Competitor Pattern: PartySlate Concierge Inquiry Flow]
+// High-touch concierge inquiry form with transparent discretion guarantees,
+// auto-filled package and occasion contexts, direct multi-channel access (WhatsApp/Call),
+// and seamless email handoff.
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
@@ -9,6 +13,8 @@ import {
   CheckCircle2,
   Loader2,
   Mail,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 import { CONTACT, OCCASIONS } from "../../data/constants";
 import { useAppStore } from "../../store/useAppStore";
@@ -19,14 +25,18 @@ async function submitCallback(payload) {
   // Wait with visual feedback so user sees the transition to their email app
   await new Promise((resolve) => setTimeout(resolve, 1400));
 
+  const pkgLine = payload.packageId
+    ? `Package Tier: ${payload.packageId.toUpperCase()}\n`
+    : "";
   const subject = encodeURIComponent(
-    `Surprise Request: ${payload.occasion || "Celebration"} - ${payload.name}`,
+    `Surprise Request: ${payload.occasion || "Celebration"}${payload.packageId ? ` (${payload.packageId.toUpperCase()})` : ""} - ${payload.name}`,
   );
   const body = encodeURIComponent(
     `Hello Yehidat Team,\n\nI would like to request a surprise package.\n\n` +
       `Name: ${payload.name}\n` +
       `Phone: ${payload.phone}\n` +
       `Occasion: ${payload.occasion || "Not specified"}\n` +
+      pkgLine +
       `Date: ${payload.date || "Not specified"}\n` +
       `Message: ${payload.message || "None"}\n\n` +
       `Sent via Yehidat website`,
@@ -40,7 +50,7 @@ async function submitCallback(payload) {
 
 function ChannelCard({ icon, label, value, href, external }) {
   const inner = (
-    <div className="flex items-center gap-3 px-4 py-4 bg-parchment border border-gold-edge/25 rounded-xl transition-all duration-150 hover:border-gold-edge hover:shadow-[0_0_0_3px_#FFF8DC]">
+    <div className="flex items-center gap-3 px-4 py-4 bg-parchment border border-gold-edge/25 rounded-xl transition-all duration-200 hover:border-gold hover:shadow-gold hover:-translate-y-0.5">
       <div className="w-11 h-11 rounded-lg bg-gold-pale flex items-center justify-center text-xl shrink-0">
         {icon}
       </div>
@@ -65,6 +75,8 @@ function ChannelCard({ icon, label, value, href, external }) {
 export default function HomeContact() {
   const { t } = useTranslation();
   const selectedOccasion = useAppStore((s) => s.selectedOccasion);
+  const selectedPackageId = useAppStore((s) => s.selectedPackageId);
+  const setSelectedPackageId = useAppStore((s) => s.setSelectedPackageId);
   const clearSelection = useAppStore((s) => s.clearSelection);
 
   const [form, setForm] = useState({
@@ -91,7 +103,7 @@ export default function HomeContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutation.mutate(form);
+    mutation.mutate({ ...form, packageId: selectedPackageId });
   };
 
   const handleReset = () => {
@@ -154,7 +166,7 @@ export default function HomeContact() {
                   <div className="flex justify-center mb-4">
                     <CheckCircle2 className="w-12 h-12 text-gold-deep" />
                   </div>
-                  <h3 className="font-display font-bold text-xl mb-2">
+                  <h3 className="font-display font-bold text-xl mb-2 text-ink">
                     {t("contact.successTitle")}
                   </h3>
                   <p className="text-sm text-ink-muted mb-2">
@@ -165,7 +177,9 @@ export default function HomeContact() {
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-3">
                     <a
-                      href={`https://wa.me/${CONTACT.WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi Yehidat! I submitted a request for ${form.name} (${form.occasion || "Celebration"}).`)}`}
+                      href={`https://wa.me/${CONTACT.WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                        `Hi Yehidat! I submitted a request for ${form.name} (${form.occasion || "Celebration"}${selectedPackageId ? ` - ${selectedPackageId.toUpperCase()} Package` : ""}).`,
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-gold text-xs inline-flex items-center gap-1.5"
@@ -174,6 +188,7 @@ export default function HomeContact() {
                       <span>WhatsApp Yehidat</span>
                     </a>
                     <button
+                      type="button"
                       onClick={handleReset}
                       className="btn-outline text-xs"
                     >
@@ -187,12 +202,53 @@ export default function HomeContact() {
                   initial={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <h3 className="font-display font-bold text-xl mb-1">
-                    {t("contact.formTitle")}
-                  </h3>
-                  <p className="text-sm text-ink-muted mb-6">
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <h3 className="font-display font-bold text-xl text-ink">
+                      {t("contact.formTitle")}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-ink-muted mb-5">
                     {t("contact.formSubtitle")}
                   </p>
+
+                  {/* Discretion Guarantee Notice */}
+                  <div className="flex items-center gap-2.5 p-3.5 mb-5 rounded-xl bg-gold-pale border border-gold-edge/35 text-xs text-ink-soft">
+                    <ShieldCheck className="w-4 h-4 text-gold shrink-0" />
+                    <span>
+                      {t(
+                        "contact.discretionNotice",
+                        "100% Confidential: We never spoil the surprise. Our team coordinates secretly until the reveal.",
+                      )}
+                    </span>
+                  </div>
+
+                  {/* Selected Package Indicator */}
+                  {selectedPackageId && (
+                    <div className="flex items-center justify-between p-3 mb-5 rounded-xl bg-gold/10 border border-gold/40 text-xs">
+                      <div className="flex items-center gap-2">
+                        <Sparkles className="w-4 h-4 text-gold shrink-0" />
+                        <span className="text-ink">
+                          <strong className="text-gold font-semibold">
+                            {t(
+                              `packages.${selectedPackageId}.name`,
+                              selectedPackageId,
+                            )}
+                          </strong>{" "}
+                          {t(
+                            "contact.selectedPackageBadge",
+                            "Package Selected",
+                          )}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedPackageId(null)}
+                        className="text-[11px] text-ink-muted hover:text-gold transition-colors underline"
+                      >
+                        {t("contact.changePackage", "Change")}
+                      </button>
+                    </div>
+                  )}
 
                   <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -206,7 +262,7 @@ export default function HomeContact() {
                           onChange={handleChange}
                           required
                           placeholder={t("contact.namePlaceholder")}
-                          className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold-edge focus:shadow-[0_0_0_3px_#FFF8DC] transition-all"
+                          className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold focus:ring-1 focus:ring-gold/40 focus:shadow-[0_0_16px_rgba(245,197,24,0.15)] transition-all"
                         />
                       </div>
                       <div>
@@ -220,7 +276,7 @@ export default function HomeContact() {
                           required
                           type="tel"
                           placeholder={t("contact.phonePlaceholder")}
-                          className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold-edge focus:shadow-[0_0_0_3px_#FFF8DC] transition-all"
+                          className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold focus:ring-1 focus:ring-gold/40 focus:shadow-[0_0_16px_rgba(245,197,24,0.15)] transition-all"
                         />
                       </div>
                     </div>
@@ -234,7 +290,7 @@ export default function HomeContact() {
                         value={form.occasion}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold-edge focus:shadow-[0_0_0_3px_#FFF8DC] transition-all"
+                        className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold focus:ring-1 focus:ring-gold/40 focus:shadow-[0_0_16px_rgba(245,197,24,0.15)] transition-all"
                       >
                         <option value="" disabled>
                           {t("contact.occasionPlaceholder")}
@@ -256,7 +312,7 @@ export default function HomeContact() {
                         value={form.date}
                         onChange={handleChange}
                         type="date"
-                        className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold-edge focus:shadow-[0_0_0_3px_#FFF8DC] transition-all"
+                        className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold focus:ring-1 focus:ring-gold/40 focus:shadow-[0_0_16px_rgba(245,197,24,0.15)] transition-all"
                       />
                     </div>
 
@@ -270,12 +326,12 @@ export default function HomeContact() {
                         onChange={handleChange}
                         rows={3}
                         placeholder={t("contact.messagePlaceholder")}
-                        className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold-edge focus:shadow-[0_0_0_3px_#FFF8DC] transition-all resize-none"
+                        className="w-full px-4 py-3 border border-gold-edge/25 rounded-lg text-sm text-ink bg-parchment outline-none focus:border-gold focus:ring-1 focus:ring-gold/40 focus:shadow-[0_0_16px_rgba(245,197,24,0.15)] transition-all resize-none"
                       />
                     </div>
 
                     {mutation.isError && (
-                      <p className="text-sm text-red-600">
+                      <p className="text-sm text-red-400">
                         Something went wrong — please try again or WhatsApp us
                         directly.
                       </p>

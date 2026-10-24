@@ -12,11 +12,12 @@
   },
   "hero": {
     "tag": "Addis Ababa's Surprise Specialists",
+    "discretionPill": "Dhiheessa Iccitii %100 • Dukam fi Bishooftuu",
     "titleLine1": "Surprises Godhi",
     "titleEmphasis": "Imimman Gammachu Bossissi",
     "subtitle": "Eenyun isinif haa gammachisnu ?. Hunduma isa nuti ni dhunfanne hojjanna  Ababoo, cake, babbarechu, iddo qophi hunduma akka hin irranfatamne goona.",
     "ctaPrimary": "Karoorsi Surprise",
-    "ctaSecondary": "Akkamitti isa jedhu ilaali",
+    "ctaSecondary": "Gochawwan Ilaalaa",
     "trustCount": "200+",
     "trustLabel": "surprises kan bara darbe",
     "badgeLabel": "Next surprise in",
@@ -26,6 +27,7 @@
   "occasions": {
     "eyebrow": "Any reason to celebrate",
     "title": "We plan surprises for every occasion",
+    "subtitle": "Qophii surprise iccitii guutuun qophaa'u filachuuf ayyaana barbaaddan filadhaa.",
     "birthday": "Birthday",
     "anniversary": "Anniversary",
     "graduation": "Graduation",
@@ -33,17 +35,29 @@
     "fathersDay": "Father's Day",
     "mothersDay": "Mother's Day",
     "promotion": "Promotion",
-    "justBecause": "Just Because"
+    "justBecause": "Just Because",
+    "badges": {
+      "birthday": "Keekii & Faaya",
+      "anniversary": "Jaalala",
+      "graduation": "Eebbifama",
+      "valentines": "Jaalala",
+      "fathersDay": "Galata",
+      "mothersDay": "Abaaboo",
+      "promotion": "Milkaa'ina",
+      "justBecause": "Gammachuu"
+    }
   },
   "how": {
     "eyebrow": "Simple process",
     "title": "How it works",
+    "subtitle": "Karoora keessan irraa kaasee hanga yeroo dinqisiisaatti tarkaanfiiwwan salphaa sadii.",
     "step1Title": "You tell us",
     "step1Body": "Call or WhatsApp us with who you want to surprise, the occasion, and when. Our team guides you through the rest.",
     "step2Title": "We prepare everything",
     "step2Body": "We source the cake, flowers, decorations, venue setup and more — you don't lift a finger. We confirm when it's all ready.",
     "step3Title": "They're surprised",
-    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit."
+    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit.",
+    "secrecyFootnote": "%100 Iccitii: Hanga yeroo gubbaatti mul'atutti waan tokkoyyuu hin shakkan."
   },
   "packages": {
     "eyebrow": "Choose your package",
@@ -53,6 +67,12 @@
     "depositNote": "ETB {{amount}} deposit to confirm",
     "mostPopular": "Most Popular",
     "discountOff": "Hir'ina {{percent}}%",
+    "categories": {
+      "cake": "Keekii",
+      "flowers": "Abaaboo",
+      "atmosphere": "Haala Naannoo",
+      "memories": "Yaadannoo"
+    },
     "basic": {
       "name": "Basic",
       "description": "A warm, heartfelt surprise for the people who matter most.",
@@ -91,6 +111,7 @@
     "eyebrow": "Real moments",
     "title": "Surprises we've brought to life",
     "subtitle": "Qophiiwwan keenya filatamoo fi gammachuu dhugaa daawwadhaa.",
+    "momentTag": "Yeroo Yehidat",
     "viewAll": "Suuraalee Hunda Ilaalaa",
     "breadcrumbHome": "Ka'umsa",
     "breadcrumbGallery": "Gaalerii",
@@ -103,6 +124,19 @@
     "ctaTitle": "Qophii addaa qopheessuuf qophiidhaa?",
     "ctaButton": "Nu Wajjiin Qopheessaa"
   },
+  "faq": {
+    "eyebrow": "Gaaffilee Yeroo Baay'ee Gaafataman",
+    "title": "Odoo Surprise Hin Karoorsin Dura Wanta Beekuu Qabdan",
+    "subtitle": "Iccitii eeguu, iddoowwan geessituu, filannoowwan addaa fi kaffaltii irratti deebiiwwan keenya.",
+    "q1": "Surprise %100 iccitii akka ta'u akkamitti wabii taatu?",
+    "a1": "Iccitii eeguun dhimma keenya isa jalqabaati. Namoota biroo wajjin yeroo mari'annu waa'ee surprise tasuma hin kaafnu, konkolaataan keenya asxaa hin qabu, gareen keenyas hanga sa'aatii dhumaatti qindoomina iccitii cimaan hojjeta.",
+    "q2": "Iddoowwan kamitti dhiheessitu?",
+    "a2": "Dukam, Bishooftuu fi Naannoo Shawaa Bahaa hunda keessatti ni dhiheessina. Akkasumas fedhii addaatiin Finfinnee fi naannoo isheetti ni qindeessina.",
+    "q3": "Mi'aawa keekii, abaaboo ykn faaya jijjiiruu nan danda'aa?",
+    "a3": "Eeyyee, guutummaatti! Fedhii fi jaalala keessan irratti hundaa'uun gosa keekii, bifa abaaboo, baalloonii fi waraqaa ergaa harkaan barreeffamu hunda ni qindeessina.",
+    "q4": "Yeroo hangam dura qabsiisuu qaba, kaffaltiin duraa hoo meeqa?",
+    "a4": "Qophii idileetiif sa'aatii 24-48 dura akka nu qunnamtan gorsina. Kaffaltiin duraa %25 guyyaa keessan mirkaneessa."
+  },
   "contact": {
     "eyebrow": "Get in touch",
     "title": "Ready to plan something special?",
@@ -113,6 +147,9 @@
     "hoursValue": "Mon–Sun, 9am–5pm",
     "formTitle": "Request a callback",
     "formSubtitle": "Leave your details and we'll call you back within a few hours.",
+    "discretionNotice": "Iccitii %100: Surprise keessan tasuma hin beeksisnu. Hanga daqiiqaa dhumaatti iccitiin qindeessina.",
+    "selectedPackageBadge": "Kuufama Filatame",
+    "changePackage": "Jijjiiri",
     "nameLabel": "Your name",
     "namePlaceholder": "Abebe Girma",
     "phoneLabel": "Phone number",
