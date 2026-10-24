@@ -6,7 +6,9 @@
     "gallery": "Suurale",
     "cta": "Surprise karoorsi",
     "about": "Waa'ee Keenya",
-    "team": "Garee Keenya"
+    "team": "Garee Keenya",
+    "trustBadge": "Dhiheessa Iccitii %100 • Dukam, Bishooftuu fi Naannoo Ishee",
+    "conciergeChat": "Qindeessaa"
   },
   "hero": {
     "tag": "Addis Ababa's Surprise Specialists",
@@ -129,10 +131,24 @@
     "submitAnother": "Submit another"
   },
   "footer": {
-    "brandDesc": "Addis Ababa's dedicated surprise planning team. We turn your love into moments they'll never forget.",
+    "brandDesc": "Garee qophii surprise addaa Dukam, Bishooftuu fi Naannoo Shawaa Bahaatti tajaajilu. Jaalala keessan gara yaadannoo bara baraatti geeddara.",
     "quickLinks": "Quick links",
-    "contact": "Contact",
-    "rights": "All rights reserved."
+    "occasionsTitle": "Gochawwan fi Tajaajiloota",
+    "companyTitle": "Dhaabbata",
+    "contact": "Qindeessaa fi Quunnamtii",
+    "rights": "Mirgi hundi seeraan eegamaadha.",
+    "coverageNotice": "Dukam, Bishooftuu fi Naannoo Shawaa Bahaatti iccitii guutuun kan dhihaatu (Finfinnee qindoomina duraaniin).",
+    "hours": "Wiixata–Dilbata: Sa'aatii 2:00 WD – 2:00 WB",
+    "trustPillars": {
+      "discretionTitle": "Iccitii Eegame %100",
+      "discretionDesc": "Karoora irraa kaasee hanga yeroo dinqisiisaatti iccitii guutuun kan hojjatamu.",
+      "cakeTitle": "Keekii Haaraa",
+      "cakeDesc": "Guyyaa gammachuu keessaniitti keekii babbareedan qophaa'ee dhihaata.",
+      "punctualTitle": "Yeroon Gahuu",
+      "punctualDesc": "Yeroon surprise akka hin dogongorreef qindoomina sa'aatii sirrii.",
+      "calligraphyTitle": "Waraqaa Harkaan Barreeffame",
+      "calligraphyDesc": "Kuusaa hunda keessatti waraqaan ergaa harkaan barreeffame ni dabalama."
+    }
   },
   "team": {
     "eyebrow": "Garee Keenya",

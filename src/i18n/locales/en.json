@@ -6,7 +6,9 @@
     "gallery": "Gallery",
     "cta": "Plan a Surprise",
     "about": "About us",
-    "team": "Meet the Team"
+    "team": "Meet the Team",
+    "trustBadge": "100% Secret & Discreet Delivery • Dukem, Bishoftu & Surrounds",
+    "conciergeChat": "Concierge"
   },
   "hero": {
     "tag": "Surprise Planning Team",
@@ -136,10 +138,24 @@
     "submitAnother": "Submit another"
   },
   "footer": {
-    "brandDesc": "Surprise planning team based in Dukem/Bishoftu, serving Dukem/Bishoftu and surrounding areas. We turn your love into moments they'll never forget.",
+    "brandDesc": "Boutique surprise planning and luxury celebration delivery across Dukem, Bishoftu, and East Shewa Zone. We turn heartfelt love into unforgettable memories.",
     "quickLinks": "Quick links",
-    "contact": "Contact",
-    "rights": "All rights reserved."
+    "occasionsTitle": "Occasions & Services",
+    "companyTitle": "Company",
+    "contact": "Concierge & Inquiries",
+    "rights": "All rights reserved.",
+    "coverageNotice": "Handcrafted and delivered in complete secrecy across Dukem, Bishoftu, and East Shewa (Addis Ababa by arrangement).",
+    "hours": "Mon–Sun: 8:00 AM – 8:00 PM",
+    "trustPillars": {
+      "discretionTitle": "100% Secret & Discreet",
+      "discretionDesc": "Uncompromising confidentiality from planning to the reveal moment.",
+      "cakeTitle": "Fresh Artisan Cakes",
+      "cakeDesc": "Bespoke bakery creations delivered bakery-fresh on your celebration day.",
+      "punctualTitle": "Punctual Delivery",
+      "punctualDesc": "Exact-hour coordination to guarantee the perfect surprise timing.",
+      "calligraphyTitle": "Custom Calligraphy",
+      "calligraphyDesc": "Handwritten bespoke message card included with every package."
+    }
   },
   "seo": {
     "title": "Yehidat — Surprise Planning Around Dukem/Bishoftu",
