@@ -276,6 +276,9 @@ export default function Gallery() {
 
               {/* Lightbox Dialog Container */}
               <div
+                role="dialog"
+                aria-modal="true"
+                aria-label="Photo Lightbox"
                 className="relative max-h-[92vh] max-w-4xl w-full overflow-hidden rounded-2xl border border-gold-edge/40 bg-gold-pale shadow-2xl p-4 sm:p-5 flex flex-col"
                 onClick={(e) => e.stopPropagation()}
               >
