@@ -189,6 +189,22 @@
       "calligraphyDesc": "Kuusaa hunda keessatti waraqaan ergaa harkaan barreeffame ni dabalama."
     }
   },
+  "seo": {
+    "title": "Yehidat | Qophii fi Dizaayinii Gammachuu Iccitii Dukam fi Bishooftuu",
+    "description": "Yehidat waldhabdee fi gammachuu hin eegamne Dukam, Bishooftuu fi Finfinnee keessatti iccitii %100 qulqullinaan qopheessa.",
+    "about": {
+      "title": "Waa'ee Yehidat | Ogummaa Qophii Gammachuu Addaa",
+      "description": "Waa'ee Yehidat, mul'ata keenya, fi garee qophii gammachuu Dukam fi Bishooftuu keessaa baradhaa."
+    },
+    "gallery": {
+      "title": "Galarii Suuraa | Yeroo Gammachuu Yehidat",
+      "description": "Suuraalee qophii fi dizaayiniiwwan addaa Yehidat qopheesse daawwadhaa."
+    },
+    "team": {
+      "title": "Garee Keenya | Dizaayinaroota fi Qopheessitoota Yehidat",
+      "description": "Garee ogummaa fi dandeettii qabu kan gammachuu keessan dhugoomsu waliin wal baraa."
+    }
+  },
   "team": {
     "eyebrow": "Garee Keenya",
     "title": "Garee Qophiiwwan Gammachuu Qopheessan Baradhaa",
